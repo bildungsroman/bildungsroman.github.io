@@ -1,0 +1,273 @@
+storyjs_jsonp_data = {
+    "timeline":
+    {
+        "date": [
+            {    
+                "startDate":"2001,8",        
+                "endDate":"2004,12",
+                "headline":"University of Texas",
+                "text":"<p>Earned my B.A. in English with a minor in Business Administration and Astronomy at the University of Texas in Austin, Texas</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/UTAustin.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2005,9",
+                "endDate":"2006,10",
+                "headline":"Jagiellonian University",
+                "text":"<p>Earned my M.A. in European Studies at the Jagiellonian University in Krakow, Poland</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/UJKrakow.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2005,3",
+                "endDate":"2005,9",
+                "headline":"Stage Scene Magazine",
+                "text":"Founded and ran a magazine on Austin music",
+                "asset":
+                {
+                    "media":"images/resume-images/ss_cover_web.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2006,10",
+                "endDate":"2010,12",
+                "headline":"Lifeboat Ltd.",
+                "text":"Started off as a travel writer, ended up running a newspaper...",
+                "asset":
+                {
+                    "media":"images/resume-images/LocalLife.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2008,5",
+                "endDate":"2010,12",
+                "headline":"Krakow Post",
+                "text":"<p>Served as the editor in chief of Krakow's top English-language newspaper</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/KP.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2010,3",
+                "headline":"Begun studying Kung Fu",
+                "text":"Started training at a local Wing Chun Kung Fu academy",
+                "asset":
+                {
+                    "media":"images/resume-images/kung_fu.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+
+      {
+                "startDate":"2007,9",
+                "endDate":"2007,10",
+                "headline":"Transiberian Railway",
+                "text":"<p>Took the Transsiberian Railway from Moscow to Beijing, then traveled around China and to Australia on an epic intercontinental journey</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/china.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2011,5",
+                "endDate":"2013,12",
+                "headline":"Volunteered with TEDxKraków",
+                "text":"<p>Became part of the TEDxKraków organizing team, in charge of blogging and social media</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/TEDxKrakow.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2013,12",
+                "endDate":"2015,10",
+                "headline":"Bitspiration News",
+                "text":"<p>Co-founded and served as the editor in chief of the news section of the Bitspiration Festival, covering tech and startups in Poland</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/bitspiration-logo-web.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },    
+      {
+                "startDate":"2010,12",
+                "headline":"Started freelancing",
+                "text":"<p>Started my own freelance company as a writer, editor and translator</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/freelancing.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2015,1",
+                "headline":"Started consulting",
+                "text":"<p>Became a consultant for Polish and CEE startups trying to break into the U.S. and UK markets</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/consulting.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2007,11",
+                "endDate":"2008,3",
+                "headline":"First photography exhibition",
+                "text":"<p>Three photographs exhibited (one won an honorable mention) at the International Culture Center, Krakow, Poland, as part of the Saved from Oblivion exhibition</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/saved_from_oblivion.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2011,10",
+                "headline":"Unsound Festival",
+                "text":"<p>Became the official photographer for the Unsound Festival</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/unsound28082013.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2012,3",
+                "headline":"SXSW",
+                "text":"<p>Joined the SXSW Photo Crew as a live music photographer</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/SXSW.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2009,11",
+                "headline":"Natural Process released",
+                "text":"<p>Released the first full-length LP as part of New Century Classics, followed by a nationwide tour</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/NCC_Natural_Process.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2013,2",
+                "endDate":"2013,3",
+                "headline":"Conquered 6 continents",
+                "text":"<p>Stepped foot on the 6th of 7 continents when visiting Brazil</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/rio.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2010,10,9",
+                "endDate":"2010,10,17",
+                "headline":"Iceland",
+                "text":"<p>Rode tiny horses and climbed glaciers while exploring and photographing Iceland</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/iceland.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2013,7,16",
+                "headline":"<em>The Essential Guide to Being Polish</em> is published",
+                "text":"<p>My first book is published by New Europe Books and distributed by Penguin Random House. It's available on Amazon, Barnes & Noble, etc.</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/essential_guide.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+      {
+                "startDate":"2006,12",
+                "headline":"Launched Tłumaczenia Bez Biura",
+                "text":"<p>Launched my own translation company in Poland, Tłumaczenia Bez Biura (Translations Without an Office)</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/TBB.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+       {
+                "startDate":"2016,6",
+                "headline":"<em>KICstart Your Business</em> is published",
+                "text":"<p>Wrote and managed the design and printing of the workbook <em>KICstart Your Business</em> for KIC InnoEnergy</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/KIC-cover.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+        {
+                "startDate":"2017,9",
+                "headline":"<em>PowerGuide</em> is published",
+                "text":"<p>Published the second edition of the KICstart Your Business workbook, now rebranded as the <em>PowerGuide</em> for InnoEnergy</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/KIC-cover2.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+       {
+                "startDate":"2017,1",
+                "headline":"Moved to Portland",
+                "text":"<p>Moved to Portland, Oregon, to continue freelancing and working with cleantech startups</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/Portland_Oregon_lg.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+        {
+                "startDate":"2018,1",
+                "endDate":"2018,4,13",
+                "headline":"Full-Stack Development Bootcamp",
+                "text":"<p>Completed a Python-based full-stack developer bootcamp at PDX Code Guild</p>",
+                "asset":
+                {
+                    "media":"images/resume-images/pdxcd.png",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+        ]
+    }
+}
