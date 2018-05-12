@@ -9,16 +9,19 @@
 /* @font-face kit */ 
 
 @font-face {
+    font-family: 'Alike';
+    src: url('https://fonts.googleapis.com/css?family=Alike');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'mausregular';
     src: url('fonts/maus-webfont.eot');
     src: url('fonts/maus-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/maus-webfont.woff2') format('woff2'),
-         url('fonts/maus-webfont.woff') format('woff'),
-         url('fonts/maus-webfont.ttf') format('truetype'),
-         url('fonts/maus-webfont.svg#mausregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+    url('fonts/maus-webfont.woff2') format('woff2'),
+    url('fonts/maus-webfont.woff') format('woff'),
+    url('fonts/maus-webfont.ttf')
 }
 /*-------------------------------*/
 /*  Original font
