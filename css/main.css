@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Alike');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 
 /*-------------------------------*/
 /*  All styles
@@ -30,7 +31,7 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.6;
-  -webkit-font-smoothing: antialised;
+  -webkit-font-smoothing: antialiased;
 }
 
 section,
