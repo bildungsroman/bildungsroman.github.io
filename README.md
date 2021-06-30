@@ -1,4 +1,4 @@
 # annaspysz.com
-A personal portfolio website using JS (created in the bad old days before I knew how to code)
+A personal portfolio website build using Gatsby.
 
 View it at annaspysz.com
