@@ -3,9 +3,13 @@ import variables from '../../../data/variables';
 
 export const NavbarLogo = styled.div`
   a {
-    color: ${variables.black};
+    color: ${variables.link.light};
     font-size: 2.3rem;
-    font-family: 'Lato-Regular';
+    font-family: 'Lato';
+  }
+  img {
+    padding: .5rem;
+    width: 120px;
   }
   @media(max-width: ${variables.breakpointPhone}) {
     display: none
@@ -28,9 +32,12 @@ export const NavbarList = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   list-style: none;
+  li a:hover {
+    color: ${variables.link.active};
+  }
   > li a {
     font-size: 1.2rem;
-    color: #232323;
+    color: ${variables.primaryLight};
     padding: .5rem .2rem;
     margin: 0 1rem;
     text-decoration: none;
@@ -49,4 +56,3 @@ export const NavbarList = styled.ul`
     }
   }
 `
-

@@ -16,6 +16,6 @@ export const Tag = styled.a`
   &.active {
     background: ${variables.primary};
     color: ${variables.inverse};
-    font-family: 'Lato-Regular';
+    font-family: 'Lato';
   }
 `

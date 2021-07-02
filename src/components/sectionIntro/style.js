@@ -1,32 +1,29 @@
-import Img from 'gatsby-image';
 import styled from 'styled-components';
 import variables from '../../data/variables';
 
-export const AboutSection = styled.section`
-  text-align: left;
-`
-export const Avatar = styled(Img)`
-  width: 100%;
+export const Wrapper = styled.div`
+  padding: 8rem 0 4rem 0;
+  @media(max-width: ${variables.breakpointPhone}) {
+    padding: 4rem 0 4rem 0;
+  }
 `
 export const Title = styled.h1`
   text-align: center;
   font-size: 3rem;
   font-family: 'Lato';
   font-weight: 400;
-  color: ${variables.grey};
+  color: ${variables.grey}
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: 2rem;
   }
 `
-export const Text = styled.p`
-  font-size: 1.4rem;
-  line-height: 2;
-  color: ${variables.text.light};
-  a {
-    color: ${variables.primary};
-    font-weight: 400;
-    padding: 0;
-  }
+export const Subtitle = styled.h2`
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 100;
+  color: ${variables.grey};
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: 1rem;
   }

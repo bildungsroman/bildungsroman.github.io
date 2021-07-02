@@ -25,7 +25,19 @@ export const Avatar = styled.div`
   background-size: cover;
   background-position: center;
 `
-
+export const Intro = styled.p`
+  font-size: 1.4rem;
+  line-height: 2;
+  color: ${variables.text.light};
+  a {
+    color: ${variables.primary};
+    font-weight: 400;
+    padding: 0;
+  }
+  @media(max-width: ${variables.breakpointPhone}) {
+    font-size: 1rem;
+  }
+`
 export const RepoContent = styled.div`
   border-radius: .5rem;
   border: 1px solid #e1e4e8;
@@ -44,8 +56,9 @@ export const Title = styled.h2`
   margin-bottom: 0;
   margin-top: 0;
   font-size: 1.4rem;
-  text-transform: capitalize;
-  font-family: 'Lato-Black';
+  font-style: italic;
+  font-family: 'Lato';
+  font-weight: 100;
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: 1rem;
   }
@@ -69,7 +82,7 @@ export const FooterItem = styled.span`
   margin-bottom: 1rem;
   font-size: .9rem;
   color: #242525;
-  font-family: 'Lato-Thin';
+  font-family: 'Lato';
   vertical-align: middle;
   display: inline-block;
   > * {

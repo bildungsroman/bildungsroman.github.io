@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Navbar from './navbar';
 import Footer from './footer';
-
-import {GlobalStyle, ContainerLayout, MainContent} from '../common';
+import { GlobalStyle, ContainerLayout, MainContent } from '../common';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,7 +33,7 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;

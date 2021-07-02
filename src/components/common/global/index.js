@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import variables from "../../../data/variables";
+import variables from '../../../data/variables';
 import './fonts.css';
 
 export const GlobalStyle = createGlobalStyle`
@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-text-size-adjust: 100%; /* 2 */
     body {
       font-size: 14px;
-      font-family: 'Lato-Regular';
+      font-family: 'Lato';
       margin: 0;
     }
     main {
@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
     b,
     strong {
       font-weight: bolder;
-      font-family: 'Lato-Black';
+      font-family: 'Lato';
     }
     small {
       font-size: 80%;
@@ -104,7 +104,10 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     .text-dark {
-      color: ${variables.black};
+      color: ${variables.text.light};
+    }
+    .text-light {
+      color: ${variables.text.dark};
     }
     .text-primary {
       color: ${variables.primary};
@@ -147,10 +150,14 @@ export const GlobalStyle = createGlobalStyle`
   &:hover:after,
   &.active:after {
     background-color: ${variables.primary};
+    color: ${variables.text.light};
     transform: scale(1);
     transform-origin: 0 50%;
     transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s ease-out, 
     -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  &.active {
+    color: ${variables.primary};
   }
 }
 

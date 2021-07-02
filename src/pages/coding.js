@@ -3,34 +3,36 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Repository from '../components/works/github';
 import { graphql } from 'gatsby';
-import { RepoGrid, RepoInfo, Avatar } from '../components/styled/repository';
-import { SectionIntro, ContainerLayout } from '../components/common';
+import { RepoGrid, Intro } from '../components/styled/repository';
+import SectionIntro from '../components/sectionIntro';
+import { ContainerLayout } from '../components/common';
 
-const RepositoryPage = ({data}) => { 
+const CodingPage = ({data}) => { 
   const {
-    name,
-    avatarUrl,
     repositories,
   } = data.githubData.data.viewer;
 
   return (
-    <Layout> 
-      <SEO title='Github Repositories' />
-      <ContainerLayout>
-        <SectionIntro>
-          <RepoInfo>
-            <Avatar style={{ backgroundImage: `url(${avatarUrl})` }} />
-            <h2>{name}</h2>
-          </RepoInfo>
-          <RepoGrid>
-            {repositories.nodes.map((repo, index) => <Repository key={index} repo={repo} />).reverse()}
-          </RepoGrid>
-        </SectionIntro>
-      </ContainerLayout>
-    </Layout>
+    <>
+      <Layout> 
+        <SEO title='Coding'/>
+        <ContainerLayout>
+          <SectionIntro title='Coding' subtitle='JS and serverless all the things!' />
+            <Intro>
+              My main stack consists of JavaScript frameworks: React, Gatsby, and NodeJS. I've worked with Python and Golang in the past, but have forgotten much of the former and wasn't a huge fan of the latter.
+            </Intro>
+            <Intro>
+              Check out some of my public repositories below:
+            </Intro>
+            <RepoGrid>
+              {repositories.nodes.map((repo, index) => <Repository key={index} repo={repo} />).reverse()}
+            </RepoGrid>
+        </ContainerLayout>
+      </Layout>
+    </>
   )
 }
-export default RepositoryPage;
+export default CodingPage;
 
 export const gitHubQuery = graphql`
   {

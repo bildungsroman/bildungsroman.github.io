@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import variables from '../../../data/variables';
 
 export const FooterStyle = styled.footer`
-	padding-top: 1rem;
-  padding-bottom: 8rem;
+	margin-top: 6rem;
+	padding: 1rem;
 	z-index: 0;
 	position: relative;
 	text-align: left;
@@ -19,7 +19,8 @@ export const FooterStyle = styled.footer`
 	.quote {
 		margin: 0;
 		font-size: 4rem;
-		font-family: 'Lato-Black';
+		font-family: 'Lato';
+		font-weight: 400;
 		line-height: 1.2;
 		color: ${variables.primary};
 		@media(max-width: ${variables.breakpointPhone}) {
@@ -34,13 +35,16 @@ export const SubRight = styled.p`
 	letter-spacing:2px;
 	text-transform: capitalize;
 	margin-bottom: 20px;
-	font-family: 'Lato-Regular';
+	font-family: 'Lato';
 `;
 
 export const CopyRight = styled.p`
 	font-size: 11px;
 	line-height: 1.8;
-	letter-spacing:1px;
+	letter-spacing: 1px;
+	a, a:visited {
+		color: ${variables.primary};
+	}
 `;
 
 export const FooterBody = styled.div`
@@ -60,17 +64,24 @@ export const FooterSocialMedia = styled.ul`
 		align-items: center;
 		justify-content: space-between;
 	}
+	h3 {
+		color: ${variables.primary};
+		font-weight: 400;
+	}
 	li {
 		margin-bottom: .5rem;
 	}
 `;
 
 export const MediaLink = styled.a`
-	padding: 1rem 0rem;
-	padding-bottom: .5rem;
+	padding: .5rem;
 	line-height: 1;
 	font-size: 1rem;
+	font-weight: 100;
   text-transform: capitalize;
-  font-family: 'Lato-Regular';
+  font-family: 'Lato';
 	color: ${variables.primary};
+	svg {
+		margin-right: .5rem;
+	}
 `;

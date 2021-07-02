@@ -15,3 +15,16 @@ export const ContainerLayout = styled.div`
   }
   
 `
+export const ListSection = styled.div`
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-column-gap: 1rem !important;
+  iframe {
+    width: 100%;
+    margin: 2rem auto;
+  }
+  @media only screen and (min-width: ${variables.breakpointLarge}) {
+    grid-template-columns: 1fr;
+  }
+  
+`
