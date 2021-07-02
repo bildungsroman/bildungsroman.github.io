@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "name": "twitter",
+    "url": "https://twitter.com/annaspies"
+  },
+  {
+    "id": 1,
+    "name": "linkedin",
+    "url": "https://www.linkedin.com/in/annaspysz/"
+  },
+  {
+    "id": 2,
+    "name": "github",
+    "url": "https://github.com/bildungsroman"
+  },
+  {
+    "id": 3,
+    "name": "dev",
+    "url": "https://dev.to/annaspies"
+  }
+]

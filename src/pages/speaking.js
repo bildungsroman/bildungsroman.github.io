@@ -1,0 +1,40 @@
+import React from 'react';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { Intro } from '../components/styled/repository';
+import SectionIntro from '../components/sectionIntro';
+import { ContainerLayout, ListSection } from '../components/common';
+
+const SpeakingPage = () => { 
+  return (
+    <>
+      <Layout> 
+        <SEO title='Speaking' />
+        <ContainerLayout>
+          <SectionIntro title='Speaking' subtitle='Occasional Serverless Thought-Haver&trade;' />
+          <Intro>
+            I'm new to speaking, but am passionate about making serverless application development accessible to users at all levels, particularly beginners and those from non-traditional backgrounds.
+          </Intro>
+          <h2>Selected Talks</h2>
+          <iframe width="100%" height="700" src="https://www.youtube-nocookie.com/embed/NFRJuFlBFzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <ListSection>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mRVN7M0o9o4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iMwFGhnX01A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </ListSection>
+          <h2>Selected Blog Posts</h2>
+          <Intro>
+            In addition to speaking, I love developing and writing tutorials, the sillier the better. You can see a lot of my work on the <a href="https://www.stackery.io/blog/" target="_blank" rel="noreferrer">Stackery Blog</a>, and here's a few select posts:
+            <ul>
+              <li><a href="https://dev.to/annaspies/global-state-in-gatsby-or-having-and-eating-your-cake-too-3bjj" target="_blank" rel="noreferrer">Global State in Gatsby, or Having and Eating Your Cake, Too</a> @ Dev</li>
+              <li><a href="https://dev.to/annaspies/alexa-how-can-i-win-an-echo-and-learn-to-build-an-alexa-app-52c" target="_blank" rel="noreferrer">Alexa, How Can I Win an Echo (and learn to build an Alexa app)?</a> @ Dev</li>
+              <li><a href="https://dev.to/annaspies/i-used-cypress-as-an-xbox-web-scraper-and-i-regret-nothing-1bn4" target="_blank" rel="noreferrer">I used Cypress as an Xbox web scraper and I regret nothing </a> @ Dev</li>
+              <li><a href="https://www.stackery.io/blog/top-10-deployment-errors/" target="_blank" rel="noreferrer">Top 10 Serverless Deployment Errors (and How to Fix Them)</a> @ Stackery</li>
+              <li><a href="https://www.stackery.io/blog/serverless-gong/" target="_blank" rel="noreferrer">Building Slack Bots for Fun: A Serverless Release Gong</a> @ Stackery</li>
+            </ul>
+          </Intro>
+        </ContainerLayout>
+      </Layout>
+    </>
+  )
+}
+export default SpeakingPage;
