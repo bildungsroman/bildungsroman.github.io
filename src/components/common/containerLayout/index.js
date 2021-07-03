@@ -17,14 +17,17 @@ export const ContainerLayout = styled.div`
 `
 export const ListSection = styled.div`
   display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  grid-column-gap: 1rem !important;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
   iframe {
     width: 100%;
     margin: 2rem auto;
   }
-  @media only screen and (min-width: ${variables.breakpointLarge}) {
+  @media(max-width: ${variables.breakpointPhone}) {
     grid-template-columns: 1fr;
+    iframe {
+      margin: .5rem auto;
+      max-height: 400px;
+    }
   }
-  
 `

@@ -11,17 +11,19 @@ const Footer = () => {
 			<FooterStyle>
 				<ContainerLayout>
 					<FooterBody>
-						<FooterSocialMedia>
+						<div>
 							<h3>Elsewhere</h3>
-							{socialMedia.map(({ id, name, url }) => (
-								<li key={id}>
-									<MediaLink className='lined-link' href={url} target='_blank' rel='noopener noreferrer' aria-label={`follow me on ${name}`}>
-										<FontAwesomeIcon icon={["fab", name]} />
-										{name}
-									</MediaLink>
-								</li>
-							))}
-						</FooterSocialMedia>
+							<FooterSocialMedia>
+								{socialMedia.map(({ id, name, url }) => (
+									<li key={id}>
+										<MediaLink className='lined-link' href={url} target='_blank' rel='noopener noreferrer' aria-label={`follow me on ${name}`}>
+											<FontAwesomeIcon icon={["fab", name]} />
+											{name}
+										</MediaLink>
+									</li>
+								))}
+							</FooterSocialMedia>
+						</div>
 						<div>
 							<p className='text-primary quote'> Want to say hi?</p>
 							<ButtonDefault href={`mailto:${data.SiteContact.email}`}> Contact me </ButtonDefault>

@@ -51,6 +51,10 @@ export const FooterBody = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	align-items: center;
+	h3 {
+		color: ${variables.primary};
+		font-weight: 400;
+	}
 	@media(max-width: ${variables.breakpointPhone}) {
 		grid-template-columns: 1fr;
 	}
@@ -63,10 +67,6 @@ export const FooterSocialMedia = styled.ul`
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	}
-	h3 {
-		color: ${variables.primary};
-		font-weight: 400;
 	}
 	li {
 		margin-bottom: .5rem;
