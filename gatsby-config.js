@@ -1,4 +1,5 @@
 const data = require('./src/data/data');
+const variables = require('./src/data/variables');
 require('dotenv').config({
   path: `.env`,
 });
@@ -17,6 +18,21 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-styled-components-dark-mode`,
+      options: {
+        light: { 
+          backgroundColor: variables.background.light,
+          textColor: variables.text.light,
+          primaryColor: variables.primary
+        },
+        dark: { 
+          backgroundColor: variables.background.dark,
+          textColor: variables.text.dark,
+          primaryColor: variables.primary
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -55,7 +71,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#000`,
-        theme_color: `#000`,
+        theme_color: `#308AC1`,
         display: `minimal-ui`,
         icon: `src/assets/img/portfolio-icon.png` // This path is relative to the root of the site.
       }

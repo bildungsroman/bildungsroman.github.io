@@ -2,7 +2,7 @@
   "name": "annaspysz.com",
   "private": true,
   "description": "Developer portfolio site built on Gatsby",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Anna Spysz",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -26,6 +26,7 @@
     "gatsby-remark-smartypants": "^4.5.0",
     "gatsby-source-filesystem": "^3.8.0",
     "gatsby-source-github-api": "^1.0.0",
+    "gatsby-styled-components-dark-mode": "^2.0.3",
     "gatsby-transformer-remark": "^4.5.0",
     "gatsby-transformer-sharp": "^3.8.0",
     "node-sass": "^6.0.1",

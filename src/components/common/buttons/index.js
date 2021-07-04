@@ -12,7 +12,7 @@ export const ButtonDefault = styled.a`
   text-decoration:none;
   border: 4px solid ${colors.primary};
   color: ${colors.primary};
-  background: #fff;
+  background: ${colors.button.light};
   outline: none;
   position: relative;
   display: inline-block;
@@ -38,19 +38,3 @@ export const ButtonDefault = styled.a`
     left: -4px;
   }
 `;
-
-export const ReadMore = styled.span`
-  color: #000;
-  font-size: 1rem;
-  text-transform: inherit;
-  letter-spacing: .7px;
-  font-family: 'Lato';
-  &:hover {
-    color: ${colors.primary};
-  }
-  &:after {
-    bottom: 1px;
-    height: 3px;
-    background: ${colors.primary};
-  }
-`

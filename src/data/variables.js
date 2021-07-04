@@ -8,6 +8,14 @@ export default {
   grey: "#585858",
   lightGrey: "#E8E8E8",
   black: "#000",
+  background: {
+    light: "#E8E8E8",
+    dark: "#112F42"
+  },
+  button: {
+    light: "#fff",
+    dark: "#112F42"
+  },
   text: {
     light: "#232323",
     dark: "#fff"
