@@ -55,7 +55,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b github-pages",
+    "deploy": "rm -rf node_modules/.cache/github-pages && gatsby build --prefix-paths && gh-pages -d public -b github-pages",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
