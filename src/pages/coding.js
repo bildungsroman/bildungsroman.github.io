@@ -22,7 +22,7 @@ const CodingPage = ({data}) => {
               My main stack consists of JavaScript frameworks: React, Gatsby, and NodeJS. I've worked with Python and Golang in the past, but have forgotten much of the former and wasn't a huge fan of the latter.
             </Intro>
             <Intro>
-              I've worked on serverless applications since 2018, primarily using AWS services such as Lambda, API/HTTP Gateway, DynamoDB, SQS, SES, and S3. I'm very familiar with serverless architecture and have worked on both the frontend and backend of serverless applications. If you don't believe me, ask Jeremy Daly - I was named a <a href="https://offbynone.io/issues/105/" target="_blank" rel="noreferrer">Serverless Star</a> ⭐ in his Off-by-none newsletter. I'm an AWS Certified Cloud Practitioner (which, TBH, I only got to get access to the certification lounge at re:Invent).
+              I've worked on serverless applications since 2018, primarily using AWS services such as Lambda, API/HTTP Gateway, DynamoDB, SQS, SES, and S3. I'm very familiar with serverless architecture and have worked on both the frontend and backend of serverless applications. If you don't believe me, ask Jeremy Daly - I was named a <a href="https://offbynone.io/issues/105/" target="_blank" rel="noreferrer">Serverless Star</a> ⭐ in his Off-by-none newsletter. I'm an AWS Certified Cloud Practitioner (which, TBH, I only got to get access to the certification lounge at re:Invent 🤷‍♀️☕). One day I hope AWS makes a serverless developer certification, which I will eagerly get.
             </Intro>
             <Intro>
               Check out some of my public repositories below:
