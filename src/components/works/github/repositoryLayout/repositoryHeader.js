@@ -8,7 +8,7 @@ export const RepositoryHeader = ({ repo }) => {
       <Title>
         <a
           href={`https://github.com${repo.resourcePath}`}
-          target='_blank' rel='noreferrer'
+          target='_blank'
           rel='noopener noreferrer'
         >
           {repo.name}

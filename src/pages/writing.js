@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import { Intro } from '../components/styled/repository';
 import SectionIntro from '../components/sectionIntro';
 import { ContainerLayout, ListSection } from '../components/common';
@@ -9,7 +9,7 @@ const WritingPage = () => {
   return (
     <>
       <Layout> 
-        <SEO title='Writing' />
+        <Seo title='Writing' />
         <ContainerLayout>
           <SectionIntro title='Writing' subtitle='On my former life as a writer' />
           <Intro>I am the co-author and editor of the book <em><a href="http://www.amazon.com/Essential-Guide-Being-Polish/dp/0985062304/" target="_blank" rel="noreferrer">The Essential Guide to Being Polish</a></em>, released July 2013. I also wrote and was the project manager for a workbook for startups titled <em>PowerGuide</em> for <a href="http://www.innoenergy.com/" alt="InnoEnergy" target="_blank" rel="noreferrer">InnoEnergy</a>. You can read an excerpt from it <a href="https://www.dropbox.com/s/visk75r1porctov/PowerGuide%20excerpt.pdf?dl=0" target="_blank" rel="noreferrer">here</a>.</Intro>
