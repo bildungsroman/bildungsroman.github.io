@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import { Intro } from '../components/styled/repository';
 import SectionIntro from '../components/sectionIntro';
 import { ContainerLayout, ListSection } from '../components/common';
@@ -9,7 +9,7 @@ const SpeakingPage = () => {
   return (
     <>
       <Layout> 
-        <SEO title='Speaking' />
+        <Seo title='Speaking' />
         <ContainerLayout>
           <SectionIntro title='Speaking' subtitle='Occasional Serverless Thought-Haver&trade;' />
           <Intro>
@@ -21,6 +21,14 @@ const SpeakingPage = () => {
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mRVN7M0o9o4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iMwFGhnX01A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </ListSection>
+          <h2>Podcast/Twitch appearances</h2>
+          <Intro>
+            <ul>
+              <li><a href="https://devopspartygames.com/episodes/s02e08" target="_blank" rel="noreferrer">DevOps Party Games - The Final Countdown</a> by <a href="https://devopspartygames.com/" target="_blank" rel="noreferrer">DevOps Party Games</a></li>
+              <li><a href="https://podcasts.apple.com/us/podcast/episode-62-serverless-storytelling-with-anna-spysz/id1361244178?i=1000440051998" target="_blank" rel="noreferrer">Screaming in the Cloud</a> with Corey Quinn</li>
+              <li><a href="https://open.spotify.com/episode/3ftNup9rzqRzYzMSYk3dPc" target="_blank" rel="noreferrer">Talking Serverless</a> with Ryan Jones</li>
+            </ul>
+          </Intro>
           <h2>Selected Blog Posts</h2>
           <Intro>
             In addition to speaking, I love developing and writing tutorials, the sillier the better. You can see a lot of my work on the <a href="https://www.stackery.io/blog/" target="_blank" rel="noreferrer">Stackery Blog</a>, and here's a few select posts:
