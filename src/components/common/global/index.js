@@ -18,6 +18,8 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 14px;
       font-family: 'Lato';
       margin: 0;
+      background-color: ${(props) => props.theme.global.background};
+      color: ${(props) => props.theme.global.color};
     }
     main {
       display: block;
@@ -34,6 +36,10 @@ export const GlobalStyle = createGlobalStyle`
     a {
       background-color: transparent;
       text-decoration: none;
+      color: ${(props) => props.theme.global.link};
+    }
+    a:hover {
+      color: ${(props) => props.theme.global.linkHover};
     }
     b,
     strong {
