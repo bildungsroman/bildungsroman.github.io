@@ -20,6 +20,9 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0;
       background-color: ${(props) => props.theme.global.background};
       color: ${(props) => props.theme.global.color};
+      @media(min-width: ${variables.breakpointPhone}) {
+        background: ${(props) => props.theme.global.backgroundGradient};
+      }
     }
     main {
       display: block;
@@ -27,6 +30,9 @@ export const GlobalStyle = createGlobalStyle`
     h1 {
       font-size: 2em;
       margin: 0.67em 0;
+    }
+    h1, h2 {
+      color: ${(props) => props.theme.global.grey};
     }
     hr {
       box-sizing: content-box; /* 1 */
@@ -108,20 +114,12 @@ export const GlobalStyle = createGlobalStyle`
     [hidden] {
       display: none;
     }
-    
-    .text-dark {
-      color: ${variables.text.light};
-    }
-    .text-light {
-      color: ${variables.text.dark};
-    }
     .text-primary {
       color: ${variables.primary};
     }
     .align-middle {
       vertical-align: middle;
     }
-
     p {
       font-size: 1.125rem;
       font-weight: 200;

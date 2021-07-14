@@ -10,7 +10,9 @@ module.exports = {
   black: "#000",
   background: {
     light: "#E8E8E8",
-    dark: "#112F42"
+    dark: "#112F42",
+    lightGradient: "linear-gradient(to bottom,rgb(239 233 233 / 90%), rgb(232 232 232))",
+    darkGradient: "linear-gradient(to bottom,rgb(13 37 51 / 90%), rgb(17 47 66))",
   },
   button: {
     light: "#fff",
@@ -21,9 +23,10 @@ module.exports = {
     dark: "#fff"
   },
   link: {
-    light: "#112F42",
-    dark: "#308AC1",
-    active: "#308AC1"
+    light: "#308AC1",
+    dark: "#70A9CC",
+    lightActive: "#70A9CC",
+    darkActive: "#308AC1"
   },
 
   // grid

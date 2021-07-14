@@ -12,7 +12,7 @@ const Navbar = ({ siteTitle }) => (
           <NavbarLogo>
             <h3>
               <Link to='/'>
-                <img src={logo} alt='logo' />
+                <img src={logo} alt={siteTitle} />
               </Link>
             </h3>
           </NavbarLogo>

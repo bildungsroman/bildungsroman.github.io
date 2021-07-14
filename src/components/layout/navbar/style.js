@@ -3,7 +3,6 @@ import variables from '../../../data/variables';
 
 export const NavbarLogo = styled.div`
   a {
-    color: ${variables.link.light};
     font-size: 2.3rem;
     font-family: 'Lato';
   }
@@ -32,12 +31,8 @@ export const NavbarList = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   list-style: none;
-  li a:hover {
-    color: ${variables.link.active};
-  }
   > li a {
     font-size: 1.2rem;
-    color: ${variables.primaryLight};
     padding: .5rem .2rem;
     margin: 0 1rem;
     text-decoration: none;

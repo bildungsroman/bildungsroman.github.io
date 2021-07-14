@@ -25,9 +25,11 @@ const darkTheme = {
   ...baseTheme,
   global: {
     background: variables.background.dark,
+    backgroundGradient: variables.background.darkGradient,
     color: variables.text.dark,
+    grey: variables.lightGrey,
     link: variables.link.dark,
-    linkHover: variables.link.active
+    linkHover: variables.link.darkActive
   }
 };
 
@@ -35,9 +37,11 @@ const lightTheme = {
   ...baseTheme,
   global: {
     background: variables.background.light,
+    backgroundGradient: variables.background.lightGradient,
     color: variables.text.light,
+    grey: variables.grey,
     link: variables.link.light,
-    linkHover: variables.link.light
+    linkHover: variables.link.lightActive
   }
 };
 
