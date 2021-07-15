@@ -120,6 +120,15 @@ export const GlobalStyle = createGlobalStyle`
     .align-middle {
       vertical-align: middle;
     }
+    .switch div {
+      background: ${(props) => props.theme.global.link};
+    }
+    .fa-adjust {
+      color: ${(props) => props.theme.global.link};
+    }
+    .slider {
+      background-color: ${(props) => props.theme.global.background};
+    }
     p {
       font-size: 1.125rem;
       font-weight: 200;

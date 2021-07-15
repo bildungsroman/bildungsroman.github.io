@@ -23,9 +23,9 @@ module.exports = {
     dark: "#fff"
   },
   link: {
-    light: "#308AC1",
+    light: "#70A9CC",
     dark: "#70A9CC",
-    lightActive: "#70A9CC",
+    lightActive: "#308AC1",
     darkActive: "#308AC1"
   },
 
