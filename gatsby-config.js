@@ -17,7 +17,6 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-fontawesome-css`,
     {
       resolve: `gatsby-styled-components-dark-mode`,
       options: {
