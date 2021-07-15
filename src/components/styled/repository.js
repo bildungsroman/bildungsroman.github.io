@@ -21,14 +21,12 @@ export const Avatar = styled.div`
   border: 10px solid #fff;
   box-shadow: 0 0 20px 10px rgb(27 26 26 / 10%);
   margin-right: 1rem;
-  background-color: #F9F9F9;
   background-size: cover;
   background-position: center;
 `
 export const Intro = styled.p`
   font-size: 1.4rem;
   line-height: 2;
-  color: ${variables.text.light};
   a {
     color: ${variables.primary};
     font-weight: 400;
@@ -68,7 +66,6 @@ export const RepoHead = styled.div`
   justify-content: space-between;
 `
 export const Text = styled.p`
-  color: rgb(25 27 29);
   margin-bottom: 1rem;
   margin-top: .25rem;
   font-size: 1rem;
@@ -81,7 +78,6 @@ export const FooterItem = styled.span`
   margin-right: .89rem;
   margin-bottom: 1rem;
   font-size: .9rem;
-  color: #242525;
   font-family: 'Lato';
   vertical-align: middle;
   display: inline-block;

@@ -12,7 +12,6 @@ export const Title = styled.h1`
   font-size: 3rem;
   font-family: 'Lato';
   font-weight: 400;
-  color: ${variables.grey}
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: 2rem;
   }
@@ -23,7 +22,6 @@ export const Subtitle = styled.h2`
   font-family: 'Lato';
   font-style: italic;
   font-weight: 100;
-  color: ${variables.grey};
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: 1rem;
   }

@@ -31,7 +31,7 @@ const Footer = () => {
 					</FooterBody>
 					<div className='box'>
 						<SubRight></SubRight>
-						<CopyRight className='text-dark'>
+						<CopyRight>
 							© 
 							<span> {new Date().getFullYear()} {data.SiteAuthor}. Built with {` `} 
 								<a href='https://www.gatsbyjs.org' target='_blank' rel='noreferrer'>Gatsby</a>{'.'}

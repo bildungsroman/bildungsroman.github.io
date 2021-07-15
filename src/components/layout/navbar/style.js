@@ -3,7 +3,6 @@ import variables from '../../../data/variables';
 
 export const NavbarLogo = styled.div`
   a {
-    color: ${variables.link.light};
     font-size: 2.3rem;
     font-family: 'Lato';
   }
@@ -30,14 +29,10 @@ export const NavbarElement = styled.div`
 export const NavbarList = styled.ul`
   padding-left: 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   list-style: none;
-  li a:hover {
-    color: ${variables.link.active};
-  }
   > li a {
     font-size: 1.2rem;
-    color: ${variables.primaryLight};
     padding: .5rem .2rem;
     margin: 0 1rem;
     text-decoration: none;
@@ -54,5 +49,46 @@ export const NavbarList = styled.ul`
     @media(max-width: ${variables.breakpointPhone}) {
       font-size: 1rem;
     }
+  }
+`
+
+export const DarkSwitch = styled.li`
+  margin: 8px;
+  svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .switch {
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .switch div {
+    position: relative;
+    display: block;
+    width: 40px;
+    border-radius: 50px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .fa-adjust {
+    transform: rotate(180deg);
+  }
+  .switch input {
+    display: none;
+  }
+  .slider {
+    margin-top: 2px;
+    transition: 0.4s;
+    border-radius: 34px;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    position: relative;
+  }
+  input:checked + .slider {
+    transform: translateX(8px);
   }
 `

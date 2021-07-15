@@ -1,5 +1,4 @@
 const data = require('./src/data/data');
-const variables = require('./src/data/variables');
 require('dotenv').config({
   path: `.env`,
 });
@@ -21,16 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-styled-components-dark-mode`,
       options: {
-        light: { 
-          backgroundColor: variables.background.light,
-          textColor: variables.text.light,
-          primaryColor: variables.primary
-        },
-        dark: { 
-          backgroundColor: variables.background.dark,
-          textColor: variables.text.dark,
-          primaryColor: variables.primary
-        }
+        light: require(`${__dirname}/src/theme.js`).lightTheme,
+        dark: require(`${__dirname}/src/theme.js`).darkTheme
       }
     },
     `gatsby-transformer-sharp`,

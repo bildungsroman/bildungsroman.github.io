@@ -1,4 +1,5 @@
-import React from 'react';
+import React  from 'react';
+import { useStyledDarkMode } from 'gatsby-styled-components-dark-mode';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Navbar from './navbar';
@@ -15,13 +16,14 @@ const Layout = ({ children }) => {
       }
     }
   `);
+  const { isDark, toggleDark } = useStyledDarkMode();
 
   return (
     <>
       <GlobalStyle />
       <MainContent>
         <ContainerLayout>
-          <Navbar siteTitle={data.site.siteMetadata.title} />
+          <Navbar isDark={isDark} toggleDark={toggleDark} siteTitle={data.site.siteMetadata.title} />
         </ContainerLayout>
         <ContainerLayout>
           <main>{children}</main>

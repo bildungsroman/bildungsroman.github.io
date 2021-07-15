@@ -13,7 +13,6 @@ export const Title = styled.h1`
   font-size: 3rem;
   font-family: 'Lato';
   font-weight: 400;
-  color: ${variables.grey};
   @media(max-width: ${variables.breakpointPhone}) {
     font-size: 2rem;
   }
@@ -21,7 +20,6 @@ export const Title = styled.h1`
 export const Text = styled.p`
   font-size: 1.4rem;
   line-height: 2;
-  color: ${variables.text.light};
   a {
     color: ${variables.primary};
     font-weight: 400;
