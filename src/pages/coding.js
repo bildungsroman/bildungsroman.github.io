@@ -21,8 +21,10 @@ const CodingPage = ({ data }) => {
           />
           <Intro>
             My main stack consists of JavaScript frameworks: React, Gatsby, and
-            NodeJS. I've worked with Python and Golang in the past, but have
-            forgotten much of the former and wasn't a huge fan of the latter.
+            NodeJS. I upgraded to TypeScript in 2021 and haven't looked back at
+            plain JS since. I've worked with Python and Golang in the past, but
+            have forgotten much of the former and wasn't a huge fan of the
+            latter.
           </Intro>
           <Intro>
             I've worked on serverless applications since 2018, primarily using

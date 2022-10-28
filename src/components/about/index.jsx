@@ -59,8 +59,8 @@ const About = () => {
           <Text>
             I was born in Poland 🇵🇱 but spent most of my childhood in Texas 🤠.
             After repatriating back to Poland for my MA, I came back to the U.S.
-            in 2017 and now live in Portland, Oregon 🌲, where I started making building
-            serverless apps more delightful (and visual) at{" "}
+            in 2017 and now live in Portland, Oregon 🌲, where I started making
+            building serverless apps more delightful (and visual) at{" "}
             <a
               className="text-primary lined-link"
               href="https://www.stackery.io/"
@@ -69,7 +69,7 @@ const About = () => {
             >
               Stackery
             </a>
-            and now do the same at 
+            and now do the same at
             <a
               className="text-primary lined-link"
               href="https://aws.amazon.com/"
@@ -78,9 +78,10 @@ const About = () => {
             >
               AWS
             </a>
-            . I'm really into React, TypeScript, NodeJS, and AWS serverless, but above all,
-            I'm obsessed with providing good documentation and making developer
-            software accessible to users at all stages of their careers.
+            . I'm really into React, TypeScript, NodeJS, and AWS serverless, but
+            above all, I'm obsessed with providing good documentation and making
+            developer software accessible to users at all stages of their
+            careers.
           </Text>
           <Text>
             When I'm not coding or writing, I can be found button-mashing my
