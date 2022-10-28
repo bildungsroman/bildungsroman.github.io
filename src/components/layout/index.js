@@ -1,10 +1,10 @@
-import React  from 'react';
-import { useStyledDarkMode } from 'gatsby-styled-components-dark-mode';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
-import Navbar from './navbar';
-import Footer from './footer';
-import { GlobalStyle, ContainerLayout, MainContent } from '../common';
+import React from "react";
+import { useStyledDarkMode } from "gatsby-styled-components-dark-mode";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import Navbar from "./navbar";
+import Footer from "./footer";
+import { GlobalStyle, ContainerLayout, MainContent } from "../common";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,7 +23,11 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <MainContent>
         <ContainerLayout>
-          <Navbar isDark={isDark} toggleDark={toggleDark} siteTitle={data.site.siteMetadata.title} />
+          <Navbar
+            isDark={isDark}
+            toggleDark={toggleDark}
+            siteTitle={data.site.siteMetadata.title}
+          />
         </ContainerLayout>
         <ContainerLayout>
           <main>{children}</main>
@@ -31,11 +35,11 @@ const Layout = ({ children }) => {
       </MainContent>
       <Footer />
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

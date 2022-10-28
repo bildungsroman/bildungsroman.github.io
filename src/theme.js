@@ -1,23 +1,23 @@
-const variables = require('./data/variables');
+const variables = require("./data/variables");
 
 const colorPalette = {
   lightShades: variables.lightGrey,
   lightAccent: variables.primaryLight,
   mainBrand: variables.primary,
   darkAccent: variables.primaryDark,
-  darkShades: variables.darkGrey
+  darkShades: variables.darkGrey,
 };
 
 const baseTheme = {
   actions: {
-    primary: colorPalette.mainBrand
+    primary: colorPalette.mainBrand,
   },
   palette: {
     darkAccent: colorPalette.darkAccent,
     darkShades: colorPalette.darkShades,
     lightAccent: colorPalette.lightAccent,
     lightShades: colorPalette.lightShades,
-    mainBrand: colorPalette.mainBrand
+    mainBrand: colorPalette.mainBrand,
   },
 };
 
@@ -29,8 +29,8 @@ const darkTheme = {
     color: variables.text.dark,
     grey: variables.lightGrey,
     link: variables.link.dark,
-    linkHover: variables.link.darkActive
-  }
+    linkHover: variables.link.darkActive,
+  },
 };
 
 const lightTheme = {
@@ -41,8 +41,8 @@ const lightTheme = {
     color: variables.text.light,
     grey: variables.grey,
     link: variables.link.light,
-    linkHover: variables.link.lightActive
-  }
+    linkHover: variables.link.lightActive,
+  },
 };
 
 exports.darkTheme = darkTheme;

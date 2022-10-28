@@ -1,5 +1,5 @@
-const data = require('./src/data/data');
-require('dotenv').config({
+const data = require("./src/data/data");
+require("dotenv").config({
   path: `.env`,
 });
 module.exports = {
@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-anchor-links`,
       options: {
-        offset: 0
-      }
+        offset: 0,
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -21,8 +21,8 @@ module.exports = {
       resolve: `gatsby-styled-components-dark-mode`,
       options: {
         light: require(`${__dirname}/src/theme.js`).lightTheme,
-        dark: require(`${__dirname}/src/theme.js`).darkTheme
-      }
+        dark: require(`${__dirname}/src/theme.js`).darkTheme,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -30,8 +30,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/img`
-      }
+        path: `${__dirname}/src/assets/img`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -40,20 +40,20 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590
+              maxWidth: 590,
             },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
+              wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`
-        ]
-      }
+          `gatsby-remark-smartypants`,
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -64,28 +64,28 @@ module.exports = {
         background_color: `#000`,
         theme_color: `#308AC1`,
         display: `minimal-ui`,
-        icon: `src/assets/img/portfolio-icon.png` // This path is relative to the root of the site.
-      }
+        icon: `src/assets/img/portfolio-icon.png`, // This path is relative to the root of the site.
+      },
     },
     {
       resolve: `gatsby-source-github-api`,
       options: {
         token: process.env.GATSBY_GITHUB_API_TOKEN,
         graphQLQuery: data.githubApiQuery,
-        variables: data.githubApiVariables
-      }
+        variables: data.githubApiVariables,
+      },
     },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-          trackingId: process.env.GATSBY_GOOGLE_ANALYTICS,
-          head: true
-      }
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS,
+        head: true,
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-    `gatsby-plugin-fontawesome-css`
+    `gatsby-plugin-fontawesome-css`,
   ],
-}
+};

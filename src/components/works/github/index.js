@@ -1,6 +1,10 @@
-import React from 'react';
-import { RepoContent } from '../../styled/repository';
-import { RepositoryHeader, RepositoryFooter, RepositoryDescription } from './repositoryLayout/index';
+import React from "react";
+import { RepoContent } from "../../styled/repository";
+import {
+  RepositoryHeader,
+  RepositoryFooter,
+  RepositoryDescription,
+} from "./repositoryLayout/index";
 
 const Repository = ({ repo }) => {
   return (
@@ -9,7 +13,7 @@ const Repository = ({ repo }) => {
       <RepositoryDescription repo={repo} />
       <RepositoryFooter repo={repo} />
     </RepoContent>
-  )
-}
+  );
+};
 
 export default Repository;

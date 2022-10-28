@@ -1,12 +1,12 @@
 const currentDate = new Date();
 
 module.exports = {
-  SiteTitle: 'Anna Spysz',
-  Sitelogo: '#',
-  SiteLogoText: 'Anna Spysz',
-  SiteAuthor: 'Anna Spysz',
-  SiteDescription: 'Full-stack software engineer',
-  defaultDescription: 'Full-stack software engineer', 
+  SiteTitle: "Anna Spysz",
+  Sitelogo: "#",
+  SiteLogoText: "Anna Spysz",
+  SiteAuthor: "Anna Spysz",
+  SiteDescription: "Full-stack software engineer",
+  defaultDescription: "Full-stack software engineer",
   githubApiQuery: `query ($number_of_repos: Int!) {
     viewer {
       name
@@ -42,21 +42,21 @@ module.exports = {
   }`,
   githubApiVariables: {
     number_of_repos: 10,
-  }, 
+  },
   SiteSocialLinks: {
-    twitter: 'https://twitter.com/annaspies',
-    github: 'https://github.com/bildungsroman',
-    linkedin: 'https://www.linkedin.com/in/annaspysz/',
+    twitter: "https://twitter.com/annaspies",
+    github: "https://github.com/bildungsroman",
+    linkedin: "https://www.linkedin.com/in/annaspysz/",
   },
   SiteAddress: {
-    city: 'Portland',
-    region: 'Pacific Northwest',
-    country: 'United States',
-    zipCode: 'ZipCode',
+    city: "Portland",
+    region: "Pacific Northwest",
+    country: "United States",
+    zipCode: "ZipCode",
   },
   SiteContact: {
-    email: 'anna@annaspysz.com',
-    phone: 'phone number',
+    email: "anna@annaspysz.com",
+    phone: "phone number",
   },
   SiteCopyright: currentDate.getFullYear(),
 };

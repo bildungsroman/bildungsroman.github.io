@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import colors from '../../../data/variables';
+import styled from "styled-components";
+import colors from "../../../data/variables";
 
 export const ButtonDefault = styled.a`
   cursor: pointer;
   margin: 10% 0%;
-  font-family: 'Lato';
+  font-family: "Lato";
   font-size: inherit;
   text-align: center;
   letter-spacing: 3px;
   text-transform: uppercase;
-  text-decoration:none;
+  text-decoration: none;
   border: 4px solid ${colors.primary};
   color: ${colors.primary};
   background: ${colors.button.light};
@@ -19,9 +19,9 @@ export const ButtonDefault = styled.a`
   padding: 15px 10px 14px;
   cursor: pointer;
   width: auto;
-  min-width:200px;
+  min-width: 200px;
   &::after {
-    min-width:200px;
+    min-width: 200px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -30,7 +30,7 @@ export const ButtonDefault = styled.a`
     left: 4px;
     top: 9px;
     z-index: -1;
-    content: '';
+    content: "";
     transition: all 0.5s;
   }
   &:hover:after {

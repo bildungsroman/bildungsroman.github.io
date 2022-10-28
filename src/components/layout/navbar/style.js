@@ -1,30 +1,30 @@
 import styled from "styled-components";
-import variables from '../../../data/variables';
+import variables from "../../../data/variables";
 
 export const NavbarLogo = styled.div`
   a {
     font-size: 2.3rem;
-    font-family: 'Lato';
+    font-family: "Lato";
   }
   img {
-    padding: .5rem;
+    padding: 0.5rem;
     width: 120px;
   }
-  @media(max-width: ${variables.breakpointPhone}) {
-    display: none
+  @media (max-width: ${variables.breakpointPhone}) {
+    display: none;
   }
-`
+`;
 
 export const NavbarElement = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  @media(max-width: ${variables.breakpointPhone}) {
+  @media (max-width: ${variables.breakpointPhone}) {
     grid-template-columns: 1fr;
     text-align: center;
     width: 100%;
   }
-`
+`;
 
 export const NavbarList = styled.ul`
   padding-left: 0;
@@ -33,7 +33,7 @@ export const NavbarList = styled.ul`
   list-style: none;
   > li a {
     font-size: 1.2rem;
-    padding: .5rem .2rem;
+    padding: 0.5rem 0.2rem;
     margin: 0 1rem;
     text-decoration: none;
     vertical-align: middle;
@@ -41,16 +41,16 @@ export const NavbarList = styled.ul`
       width: 18px;
       margin-right: 5px;
     }
-    span, 
+    span,
     svg {
       display: block;
       vertical-align: middle;
     }
-    @media(max-width: ${variables.breakpointPhone}) {
+    @media (max-width: ${variables.breakpointPhone}) {
       font-size: 1rem;
     }
   }
-`
+`;
 
 export const DarkSwitch = styled.li`
   margin: 8px;
@@ -91,4 +91,4 @@ export const DarkSwitch = styled.li`
   input:checked + .slider {
     transform: translateX(8px);
   }
-`
+`;
