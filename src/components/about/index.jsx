@@ -68,8 +68,8 @@ const About = () => {
               rel="noreferrer"
             >
               Stackery
-            </a>
-            and now do the same at
+            </a>{" "}
+            and now do the same at{" "}
             <a
               className="text-primary lined-link"
               href="https://aws.amazon.com/"
