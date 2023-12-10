@@ -5,7 +5,7 @@ import About from "../components/about";
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Anna Spysz | Portland-based full-stack web developer" />
+    <Seo title="Anna Spysz | Portland-based full-stack software engineer" />
     <About />
   </Layout>
 );

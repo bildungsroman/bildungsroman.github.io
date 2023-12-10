@@ -16,8 +16,9 @@ const SpeakingPage = () => {
             subtitle="Occasional Serverless Thought-Haver&trade;"
           />
           <Intro>
-            I'm new to speaking, but am passionate about making serverless
-            application development accessible to users at all levels,
+            Since joining AWS, I've had the priveledge of speaking at several
+            internal conferences, and hope to branch out to external events soon.
+            I'm passionate about making modern application development accessible to users at all levels,
             particularly beginners and those from non-traditional backgrounds.
           </Intro>
           <h2>Selected Talks</h2>
