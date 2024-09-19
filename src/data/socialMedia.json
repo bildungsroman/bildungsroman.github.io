@@ -16,6 +16,11 @@
   },
   {
     "id": 3,
+    "name": "stack-overflow",
+    "url": "https://stackoverflow.com/users/9245716/bildungsroman?tab=profile"
+  },
+  {
+    "id": 4,
     "name": "dev",
     "url": "https://dev.to/annaspies"
   }

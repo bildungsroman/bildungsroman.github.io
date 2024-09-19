@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -17,8 +18,24 @@ const CodingPage = ({ data }) => {
         <ContainerLayout>
           <SectionIntro
             title="Coding"
-            subtitle="JS and serverless all the things!"
+            subtitle="Frontend is my jam, teaching is my passion"
           />
+          <Intro>
+            I'm a dedicated full-stack engineer with a passion for frontend
+            development and serverless technologies. Recently, I've been
+            expanding my skills in developer advocacy and sharing what I've
+            learned with the community{" "}
+            <Link
+              to="/speaking"
+              className="lined-link"
+              activeClassName="active"
+            >
+              on stages
+            </Link>{" "}
+            and online. I love good documentation and am committed to empowering
+            others by creating user experiences that feel natural and intuitive,
+            even for beginners.
+          </Intro>
           <Intro>
             My main stack consists of JavaScript frameworks: React, Gatsby, and
             NodeJS. I upgraded to TypeScript in 2021 and haven't looked back at

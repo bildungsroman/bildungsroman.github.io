@@ -47,6 +47,8 @@ module.exports = {
     twitter: "https://twitter.com/annaspies",
     github: "https://github.com/bildungsroman",
     linkedin: "https://www.linkedin.com/in/annaspysz/",
+    stackoverflow:
+      "https://stackoverflow.com/users/9245716/bildungsroman?tab=profile",
   },
   SiteAddress: {
     city: "Portland",

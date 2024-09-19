@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { Intro } from "../components/styled/repository";
 import SectionIntro from "../components/sectionIntro";
-import { ContainerLayout, ListSection } from "../components/common";
+import { ContainerLayout } from "../components/common";
 
 const SpeakingPage = () => {
   return (
@@ -16,12 +16,36 @@ const SpeakingPage = () => {
             subtitle="Occasional Serverless Thought-Haver&trade;"
           />
           <Intro>
-            Since joining AWS, I've had the priveledge of speaking at several
-            internal conferences, and hope to branch out to external events soon.
-            I'm passionate about making modern application development accessible to users at all levels,
-            particularly beginners and those from non-traditional backgrounds.
+            Since joining AWS, I've had the privilege of speaking at several
+            internal conferences such as WebDevCon in 2022, 2023, and 2024. I
+            hope to branch out to external events soon. I'm passionate about
+            making modern application development accessible to users at all
+            levels, particularly beginners and those from non-traditional
+            backgrounds.
           </Intro>
-          <h2>Selected Talks</h2>
+          <h2>Selected Talks and Demos</h2>
+          <iframe
+            width="100%"
+            height="700"
+            src="https://www.youtube-nocookie.com/embed/lzRyDTdkCSU"
+            title="AWS On Air: Code Corner ft. Anna Spysz, TypeScript, App Composer, and Generative AI!"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <br />
+          <br />
+          <iframe
+            width="100%"
+            height="700"
+            src="https://www.youtube-nocookie.com/embed/uF-vTM6wTY0"
+            title="The best features of Application Composer you aren't using"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+          <br />
+          <br />
           <iframe
             width="100%"
             height="700"
@@ -31,26 +55,7 @@ const SpeakingPage = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-          <ListSection>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/mRVN7M0o9o4"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/iMwFGhnX01A"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </ListSection>
+          <br />
           <h2>Podcast/Twitch appearances</h2>
           <Intro>
             <ul>
@@ -106,6 +111,27 @@ const SpeakingPage = () => {
             </a>
             , and here's a few select posts:
             <ul>
+              <li>
+                <a
+                  href="https://aws.amazon.com/blogs/compute/using-generative-infrastructure-as-code-with-application-composer/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Using generative infrastructure as code with Application
+                  Composer
+                </a>{" "}
+                @ the AWS Compute Blog
+              </li>
+              <li>
+                <a
+                  href="https://dev.to/annaspies/entering-the-world-of-ai-mechanics-3776"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Entering the World of AI Mechanics
+                </a>{" "}
+                @ Dev
+              </li>
               <li>
                 <a
                   href="https://dev.to/annaspies/global-state-in-gatsby-or-having-and-eating-your-cake-too-3bjj"
