@@ -18,10 +18,10 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 14px;
       font-family: 'Lato';
       margin: 0;
-      background-color: ${props => props.theme.global.background};
-      color: ${props => props.theme.global.color};
+      background-color: ${(props) => props.theme.global.background};
+      color: ${(props) => props.theme.global.color};
       @media(min-width: ${variables.breakpointPhone}) {
-        background: ${props => props.theme.global.backgroundGradient};
+        background: ${(props) => props.theme.global.backgroundGradient};
       }
     }
     main {
@@ -32,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
       margin: 0.67em 0;
     }
     h1, h2 {
-      color: ${props => props.theme.global.grey};
+      color: ${(props) => props.theme.global.grey};
     }
     hr {
       box-sizing: content-box; /* 1 */
@@ -42,10 +42,10 @@ export const GlobalStyle = createGlobalStyle`
     a {
       background-color: transparent;
       text-decoration: none;
-      color: ${props => props.theme.global.link};
+      color: ${(props) => props.theme.global.link};
     }
     a:hover {
-      color: ${props => props.theme.global.linkHover};
+      color: ${(props) => props.theme.global.linkHover};
     }
     b,
     strong {
@@ -121,13 +121,13 @@ export const GlobalStyle = createGlobalStyle`
       vertical-align: middle;
     }
     .switch div {
-      background: ${props => props.theme.global.link};
+      background: ${(props) => props.theme.global.link};
     }
     .fa-adjust {
-      color: ${props => props.theme.global.link};
+      color: ${(props) => props.theme.global.link};
     }
     .slider {
-      background-color: ${props => props.theme.global.background};
+      background-color: ${(props) => props.theme.global.background};
     }
     p {
       font-size: 1.125rem;

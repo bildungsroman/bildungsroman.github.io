@@ -11,7 +11,7 @@ export const RepositoryFooter = ({ repo }) => {
   if (daysAgo > -21) {
     updatedAt = new Intl.RelativeTimeFormat("en", { style: "narrow" }).format(
       daysAgo,
-      "day",
+      "day"
     );
   }
 

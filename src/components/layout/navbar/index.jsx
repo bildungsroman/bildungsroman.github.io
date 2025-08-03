@@ -60,7 +60,7 @@ const Navbar = ({ isDark, siteTitle, toggleDark }) => (
               </Link>
             </li>
             <DarkSwitch>
-              <label class="switch">
+              <label className="switch">
                 <FontAwesomeIcon icon="adjust" />
                 <div>
                   <input
@@ -68,7 +68,7 @@ const Navbar = ({ isDark, siteTitle, toggleDark }) => (
                     onChange={() => toggleDark()}
                     checked={!!isDark}
                   />
-                  <span class="slider round"></span>
+                  <span className="slider round"></span>
                 </div>
               </label>
             </DarkSwitch>

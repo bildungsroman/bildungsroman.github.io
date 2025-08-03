@@ -29,7 +29,7 @@ const SpeakingPage = () => {
             height="700"
             src="https://www.youtube-nocookie.com/embed/lzRyDTdkCSU"
             title="AWS On Air: Code Corner ft. Anna Spysz, TypeScript, App Composer, and Generative AI!"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -40,7 +40,7 @@ const SpeakingPage = () => {
             height="700"
             src="https://www.youtube-nocookie.com/embed/uF-vTM6wTY0"
             title="The best features of Application Composer you aren't using"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -51,7 +51,7 @@ const SpeakingPage = () => {
             height="700"
             src="https://www.youtube-nocookie.com/embed/NFRJuFlBFzc"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
@@ -159,7 +159,8 @@ const SpeakingPage = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  I used Cypress as an Xbox web scraper and I regret nothing{" "}
+                  I used Cypress as an Xbox web scraper and I regret
+                  nothing{" "}
                 </a>{" "}
                 @ Dev
               </li>
