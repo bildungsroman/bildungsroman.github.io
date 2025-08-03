@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import colors from "../../../data/variables";
 
-export const ButtonDefault = styled.a`
+const buttonStyles = `
   cursor: pointer;
   margin: 10% 0%;
   font-family: "Lato";
@@ -37,4 +38,12 @@ export const ButtonDefault = styled.a`
     top: 0px;
     left: -4px;
   }
+`;
+
+export const ButtonDefault = styled.a`
+  ${buttonStyles}
+`;
+
+export const ButtonLink = styled(Link)`
+  ${buttonStyles}
 `;
