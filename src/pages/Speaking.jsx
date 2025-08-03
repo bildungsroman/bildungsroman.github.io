@@ -1,5 +1,5 @@
 import React from "react";
-import SectionIntro from "../components/sectionIntro";
+import SectionIntro from "../components/SectionIntro";
 import { ContainerLayout } from "../components/common";
 import { Intro } from "../components/styled/repository";
 

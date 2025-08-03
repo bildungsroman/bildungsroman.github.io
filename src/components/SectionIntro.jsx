@@ -1,5 +1,6 @@
+import React from "react";
 import styled from "styled-components";
-import variables from "../../data/variables";
+import variables from "../data/variables";
 
 export const Wrapper = styled.div`
   padding: 8rem 0 4rem 0;
@@ -26,3 +27,16 @@ export const Subtitle = styled.h2`
     font-size: 1rem;
   }
 `;
+
+const SectionIntro = ({ title, subtitle }) => {
+  return (
+    <>
+      <Wrapper>
+        {title && <Title>{title}</Title>}
+        {subtitle && <Subtitle>{subtitle}</Subtitle>}
+      </Wrapper>
+    </>
+  );
+};
+
+export default SectionIntro;
