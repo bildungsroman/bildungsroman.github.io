@@ -1,6 +1,6 @@
 const currentDate = new Date();
 
-module.exports = {
+export default {
   SiteTitle: "Anna Spysz",
   Sitelogo: "#",
   SiteLogoText: "Anna Spysz",
@@ -44,7 +44,7 @@ module.exports = {
     number_of_repos: 10,
   },
   SiteSocialLinks: {
-    twitter: "https://twitter.com/annaspies",
+    bluesky: "https://bsky.app/profile/annaspies.dev",
     github: "https://github.com/bildungsroman",
     linkedin: "https://www.linkedin.com/in/annaspysz/",
     stackoverflow:
