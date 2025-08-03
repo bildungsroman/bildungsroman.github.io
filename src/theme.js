@@ -1,4 +1,4 @@
-const variables = require("./data/variables");
+import variables from "./data/variables.js";
 
 const colorPalette = {
   lightShades: variables.lightGrey,
@@ -21,7 +21,7 @@ const baseTheme = {
   },
 };
 
-const darkTheme = {
+export const darkTheme = {
   ...baseTheme,
   global: {
     background: variables.background.dark,
@@ -33,7 +33,7 @@ const darkTheme = {
   },
 };
 
-const lightTheme = {
+export const lightTheme = {
   ...baseTheme,
   global: {
     background: variables.background.light,
@@ -44,6 +44,3 @@ const lightTheme = {
     linkHover: variables.link.lightActive,
   },
 };
-
-exports.darkTheme = darkTheme;
-exports.lightTheme = lightTheme;
