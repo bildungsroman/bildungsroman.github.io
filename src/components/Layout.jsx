@@ -6,7 +6,7 @@ import Footer from "./Footer";
 import { ContainerLayout, MainContent } from "./common";
 
 const Layout = ({ children }) => {
-  const { isDark, toggleTheme } = useTheme();
+  const { isDarkMode, toggleTheme } = useTheme();
 
   return (
     <>
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       <MainContent>
         <ContainerLayout>
           <Navbar
-            isDark={isDark}
+            isDark={isDarkMode}
             toggleDark={toggleTheme}
             siteTitle="Anna Spysz"
           />

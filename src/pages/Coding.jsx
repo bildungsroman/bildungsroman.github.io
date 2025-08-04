@@ -49,7 +49,7 @@ const Coding = () => {
           even for beginners.
         </Intro>
         <Intro>
-          My main stack consists of JavaScript frameworks: React, Gatsby, and
+          My main stack consists of JavaScript frameworks: React, NextJS, and
           NodeJS. I upgraded to TypeScript in 2021 and haven't looked back at
           plain JS since. I've worked with Python and Golang in the past, but
           have forgotten much of the former and wasn't a huge fan of the latter.

@@ -92,9 +92,10 @@ const DarkSwitch = styled.li`
     width: 20px;
     display: inline-block;
     position: relative;
+    transform: translateX(0px);
   }
   input:checked + .slider {
-    transform: translateX(8px);
+    transform: translateX(12px);
   }
 `;
 

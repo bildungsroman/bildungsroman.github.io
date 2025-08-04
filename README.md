@@ -7,23 +7,27 @@ View it at [annaspysz.com](https://annaspysz.com)
 ## Development
 
 ### Prerequisites
+
 - Node.js (v18 or higher)
 - npm
 
 ### Getting Started
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/bildungsroman/bildungsroman.github.io.git
 cd bildungsroman.github.io
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -48,6 +52,7 @@ The site is automatically deployed to GitHub Pages when changes are pushed to th
 To build and deploy manually:
 
 1. Build the project:
+
 ```bash
 npm run build
 ```
