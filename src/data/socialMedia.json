@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "bluesky",
-    "url": "https://bsky.app/profile/annaspies.bsky.social"
+    "url": "https://bsky.app/profile/annaspies.dev"
   },
   {
     "id": 1,
@@ -21,7 +21,7 @@
   },
   {
     "id": 4,
-    "name": "dev",
+    "name": "dev.to",
     "url": "https://dev.to/annaspies"
   }
 ]

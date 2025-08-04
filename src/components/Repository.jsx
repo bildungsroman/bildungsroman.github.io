@@ -1,6 +1,6 @@
 import React from "react";
 import GitHubButton from "react-github-btn";
-import { Star, Key } from "react-feather";
+import { FiStar, FiKey } from "react-icons/fi";
 import styled from "styled-components";
 import variables from "../data/variables";
 
@@ -150,12 +150,12 @@ const RepositoryFooter = ({ repo }) => {
         {/* Fixed typo: undifined -> undefined */}
       </FooterItem>
       <FooterItem>
-        <Star className="star" />
+        <FiStar className="star" />
         <span> {repo.stargazers.totalCount} </span>
       </FooterItem>
       {repo.licenseInfo && (
         <FooterItem>
-          <Key />
+          <FiKey />
           <span> {repo.licenseInfo.name} </span>
         </FooterItem>
       )}

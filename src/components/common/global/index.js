@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import variables from "../../../data/variables.js";
 import "./fonts.css";
 
@@ -177,4 +177,18 @@ export const GlobalStyle = createGlobalStyle`
 .error__emoji {
   width: 30vw;
 }
+`;
+
+export const Title = styled.h1`
+  font-family: "Lato";
+  font-size: 2rem;
+  text-transform: capitalize;
+  @media (max-width: ${variables.breakpointPhone}) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const SubText = styled.p`
+  font-size: 1rem;
+  line-height: 2;
 `;

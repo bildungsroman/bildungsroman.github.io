@@ -122,7 +122,7 @@ const Navbar = ({ isDark, siteTitle, toggleDark }) => {
             <NavbarList>
               <li>
                 <Link
-                  to="/"
+                  to="/#about"
                   className={`lined-link ${isActive("/") ? "active" : ""}`}
                 >
                   <span>About</span>
