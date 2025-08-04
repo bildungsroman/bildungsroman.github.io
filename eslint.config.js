@@ -40,6 +40,8 @@ export default [
         localStorage: "readonly",
         sessionStorage: "readonly",
         fetch: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
       },
     },
     plugins: {
@@ -58,7 +60,7 @@ export default [
       "react/prop-types": "off", // We'll rely on TypeScript for prop validation
       "react/jsx-uses-react": "off", // Not needed in React 17+
       "react/jsx-uses-vars": "error",
-      "react/no-unescaped-entities": "warn", // Allow apostrophes and quotes in JSX
+      "react/no-unescaped-entities": "off", // Allow apostrophes and quotes in JSX
       "react/no-unknown-property": "warn", // Warn about unknown DOM properties
 
       // React Hooks rules
@@ -79,7 +81,7 @@ export default [
           varsIgnorePattern: "^(_|React)$",
         },
       ],
-      "no-console": "warn",
+      "no-console": ["warn", { allow: ["error", "warn"] }],
       "prefer-const": "error",
       "no-var": "error",
       "object-shorthand": "error",
@@ -95,12 +97,12 @@ export default [
       },
     },
   },
-  // Configuration for CommonJS files (legacy Gatsby files and data files)
+  // Configuration for data files (ES modules)
   {
-    files: ["gatsby-*.js", "src/data/*.js", "src/theme.js"],
+    files: ["src/data/*.js", "src/theme.js"],
     languageOptions: {
       ecmaVersion: 2020,
-      sourceType: "commonjs",
+      sourceType: "module",
       globals: {
         console: "readonly",
         process: "readonly",

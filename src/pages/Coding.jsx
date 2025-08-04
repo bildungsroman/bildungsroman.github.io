@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import SectionIntro from "../components/sectionIntro";
+import SectionIntro from "../components/SectionIntro";
 import Repository from "../components/Repository";
 import { ContainerLayout } from "../components/common";
 import { RepoGrid, Intro } from "../components/styled/repository";
