@@ -7,14 +7,7 @@ import prettierConfig from "eslint-config-prettier";
 
 export default [
   {
-    ignores: [
-      "dist",
-      "node_modules",
-      ".cache",
-      "public",
-      "static",
-      "gatsby-*.js",
-    ],
+    ignores: ["dist", "node_modules", ".cache", "public", "static"],
   },
   // Configuration for ES modules (React components)
   {
