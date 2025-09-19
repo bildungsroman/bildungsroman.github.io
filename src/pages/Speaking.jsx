@@ -130,6 +130,16 @@ const Speaking = () => {
             </li>
             <li>
               <a
+                href="https://dev.to/annaspies/rip-cra-now-what-1h9a"
+                target="_blank"
+                rel="noreferrer"
+              >
+                My hands-on guide to migrating from CRA to Next.js
+              </a>{" "}
+              @ Dev
+            </li>
+            <li>
+              <a
                 href="https://dev.to/annaspies/global-state-in-gatsby-or-having-and-eating-your-cake-too-3bjj"
                 target="_blank"
                 rel="noreferrer"

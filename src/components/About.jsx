@@ -111,8 +111,8 @@ const About = () => {
           </a>
           . I'm really into React, TypeScript, NodeJS, NextJS, and AWS
           serverless, but above all, I'm obsessed with providing good
-          documentation and making developer software accessible to users at all
-          stages of their careers.
+          documentation and making software accessible to users at all stages of
+          their careers.
         </Text>
         <Text>
           When I'm not coding or writing, I can be found button-mashing my Xbox
