@@ -1,7 +1,14 @@
-import React from "react";
+import styled from "styled-components";
 import SectionIntro from "../components/SectionIntro";
 import { ContainerLayout } from "../components/common";
 import { Intro } from "../components/styled/repository";
+import speakingImage from "../assets/img/speaking-banner.png";
+
+const Avatar = styled.img`
+  width: 100%;
+  display: block;
+  margin: 0 auto 2rem auto;
+`;
 
 const Speaking = () => {
   return (
@@ -9,6 +16,10 @@ const Speaking = () => {
       <SectionIntro
         title="Speaking"
         subtitle="Occasional Serverless Thought-Haver&trade;"
+      />
+      <Avatar
+        src={speakingImage}
+        alt="Holding a beer while doing a talk. Possibly one of my proudest moments"
       />
       <ContainerLayout>
         <Intro>

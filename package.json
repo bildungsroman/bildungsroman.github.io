@@ -9,9 +9,8 @@
     "build": "vite build",
     "dev": "vite",
     "preview": "vite preview",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives",
-    "lint:fix": "eslint . --ext js,jsx --fix"
+    "fix": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\" && eslint . --ext js,jsx --fix",
+    "check": "eslint . --ext js,jsx --report-unused-disable-directives"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",

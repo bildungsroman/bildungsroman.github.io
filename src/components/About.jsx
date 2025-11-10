@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import variables from "../data/variables";
 import profileImage from "../assets/img/profile-text.png";
@@ -53,7 +52,7 @@ const Text = styled.p`
 const About = () => {
   return (
     <ContainerLayout>
-      <Avatar src={profileImage} alt="user photo" />
+      <Avatar src={profileImage} alt="Anna photo" />
       <AboutSection id="about">
         <Title>Full-stack human, serverless fangirl</Title>
         <Text>
