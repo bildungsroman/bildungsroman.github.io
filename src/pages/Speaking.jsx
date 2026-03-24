@@ -25,10 +25,20 @@ const Speaking = () => {
         <Intro>
           I'm passionate about making modern application development accessible
           to users at all levels, particularly beginners and those from
-          non-traditional backgrounds. Since joining AWS, I've had the privilege
-          of speaking at several internal conferences such as WebDevCon in 2022,
-          2023, 2024, and 2025, as well as making guest appearances on several
-          AWS On Air segments.
+          non-traditional backgrounds. At AWS, I had the privilege of speaking
+          at internal conferences such as WebDevCon in 2022, 2023, 2024, and
+          2025, as well as making guest appearances on several AWS On Air
+          segments. Now at Stripe, speaking is literally my job, so expect to
+          see me at a{" "}
+          <a
+            className="text-primary lined-link"
+            href="https://www.meetup.com/pro/stripe/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Stripe meetup
+          </a>{" "}
+          near you!
         </Intro>
         <h2>Selected Talks and Demos</h2>
         <iframe

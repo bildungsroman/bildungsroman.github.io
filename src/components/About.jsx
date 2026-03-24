@@ -99,7 +99,7 @@ const About = () => {
           >
             Stackery
           </a>{" "}
-          and now do the same at{" "}
+          and then at{" "}
           <a
             className="text-primary lined-link"
             href="https://aws.amazon.com/"
@@ -108,15 +108,28 @@ const About = () => {
           >
             AWS
           </a>
-          . I'm really into React, TypeScript, NodeJS, NextJS, and AWS
+          .
+        </Text>
+        <Text>
+          In 2026 I started a new adventure as a Developer Advocate at{" "}
+          <a
+            className="text-primary lined-link"
+            href="https://stripe.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Stripe
+          </a>
+          , where I hope to help Stripe developers level up their payment
+          integrations. I'm really into React, TypeScript, NextJS, and AWS
           serverless, but above all, I'm obsessed with providing good
           documentation and making software accessible to users at all stages of
           their careers.
         </Text>
         <Text>
-          When I'm not coding or writing, I can be found button-mashing my Xbox
-          controller, sampling local brews and food carts, snowboarding on Mt.
-          Hood, or kung fu fighting at my local{" "}
+          When I'm not coding, presenting, or writing, I can be found
+          button-mashing my Xbox controller, sampling local brews and food
+          carts, snowboarding on Mt. Hood, or kung fu fighting at my local{" "}
           <a
             className="text-primary lined-link"
             href="https://www.wingchunpdx.com/"
