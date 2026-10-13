@@ -6,8 +6,15 @@ import { CardGrid } from "../components/common";
 import { RepoGrid, Intro } from "../components/styled/repository";
 import repositories from "../data/repos.json";
 import apps from "../data/apps";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const Coding = () => {
+  usePageMeta({
+    title: "Coding",
+    description:
+      "Apps Anna Spysz has built, plus her featured GitHub repositories and the stack she works in: React, TypeScript, Next.js, and AWS serverless.",
+    path: "/coding",
+  });
   return (
     <>
       <SectionIntro

@@ -10,6 +10,7 @@ import {
   blogPosts,
 } from "../data/speaking";
 import speakingImage from "../assets/img/speaking-banner.png";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const Banner = styled.img`
   display: block;
@@ -75,6 +76,12 @@ const LinkList = styled.ul`
 `;
 
 const Speaking = () => {
+  usePageMeta({
+    title: "Speaking",
+    description:
+      "Talks, interviews, podcasts, and blog posts by Anna Spysz on serverless, developer tools, and payments.",
+    path: "/speaking",
+  });
   return (
     <>
       <SectionIntro

@@ -5,6 +5,7 @@ import contentsNotDeadDark from "../assets/img/apps/contentsnotdead-dark.webp";
 
 // Snapshots are 1280x800. To refresh one, screenshot the live site and run
 // `npm run optimize-images -- <file.png> --out src/assets/img/apps --width 1280`.
+// New apps should also be listed in public/llms.txt.
 export default [
   {
     name: "iffapp",

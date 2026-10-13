@@ -1,8 +1,15 @@
 import SectionIntro from "../components/SectionIntro";
 import { ListSection } from "../components/common";
 import { Intro } from "../components/styled/repository";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const Writing = () => {
+  usePageMeta({
+    title: "Writing",
+    description:
+      "Anna Spysz's writing career: co-author of The Essential Guide to Being Polish, tech journalist, editor, and translator.",
+    path: "/writing",
+  });
   return (
     <>
       <SectionIntro title="Writing" subtitle="On my former life as a writer" />

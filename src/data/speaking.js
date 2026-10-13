@@ -1,5 +1,6 @@
 // To add a video, paste its YouTube ID (the part after "watch?v=") into the
-// matching list. Optional fields: date, description.
+// matching list. Optional fields: date, description. Also add it to
+// public/llms.txt so agents see it.
 
 export const talks = [
   {
