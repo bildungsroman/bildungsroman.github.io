@@ -88,17 +88,18 @@ const IconButton = styled.button`
   justify-content: center;
   width: 2.75rem;
   height: 2.75rem;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  padding: 0;
+  border: none;
+  background: none;
   color: var(--primary);
   cursor: pointer;
-  transition: background 200ms ease;
+  transition: color 150ms ease;
   svg {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.4rem;
+    height: 1.4rem;
   }
   &:hover {
-    background: var(--surface-2);
+    color: var(--accent);
   }
 `;
 
