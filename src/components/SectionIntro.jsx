@@ -1,42 +1,33 @@
-import React from "react";
 import styled from "styled-components";
 import variables from "../data/variables";
 
-export const Wrapper = styled.div`
-  padding: 8rem 0 4rem 0;
-  @media (max-width: ${variables.breakpointPhone}) {
-    padding: 4rem 0 4rem 0;
-  }
-`;
-export const Title = styled.h1`
+const Wrapper = styled.header`
+  padding: 6rem 0 3rem;
   text-align: center;
-  font-size: 3rem;
-  font-family: "Lato";
-  font-weight: 400;
   @media (max-width: ${variables.breakpointPhone}) {
-    font-size: 2rem;
-  }
-`;
-export const Subtitle = styled.h2`
-  text-align: center;
-  font-size: 2rem;
-  font-family: "Lato";
-  font-style: italic;
-  font-weight: 100;
-  @media (max-width: ${variables.breakpointPhone}) {
-    font-size: 1rem;
+    padding: 3.5rem 0 2rem;
   }
 `;
 
-const SectionIntro = ({ title, subtitle }) => {
-  return (
-    <>
-      <Wrapper>
-        {title && <Title>{title}</Title>}
-        {subtitle && <Subtitle>{subtitle}</Subtitle>}
-      </Wrapper>
-    </>
-  );
-};
+const Title = styled.h1`
+  margin: 0;
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  letter-spacing: -0.02em;
+`;
+
+const Subtitle = styled.p`
+  margin: 1rem auto 0;
+  max-width: ${variables.readableWidth};
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--text-muted);
+`;
+
+const SectionIntro = ({ title, subtitle }) => (
+  <Wrapper>
+    <Title>{title}</Title>
+    {subtitle && <Subtitle>{subtitle}</Subtitle>}
+  </Wrapper>
+);
 
 export default SectionIntro;

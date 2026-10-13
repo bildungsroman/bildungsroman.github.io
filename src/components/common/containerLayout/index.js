@@ -3,30 +3,22 @@ import variables from "../../../data/variables";
 
 export const ContainerLayout = styled.div`
   width: ${variables.width};
+  max-width: ${variables.maxWidth};
   margin-left: auto;
   margin-right: auto;
-
-  &.wrapper {
-    max-width: ${variables.wrapperWidth};
-    margin: auto;
-  }
-  @media only screen and (min-width: ${variables.breakpointLarge}) {
-    max-width: 75rem;
-  }
 `;
+
 export const ListSection = styled.div`
-  display: grid !important;
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 1rem;
-  iframe {
-    width: 100%;
-    margin: 2rem auto;
-  }
+  gap: 2rem;
   @media (max-width: ${variables.breakpointPhone}) {
     grid-template-columns: 1fr;
-    iframe {
-      margin: 0.5rem auto;
-      max-height: 400px;
-    }
   }
+`;
+
+export const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 1.75rem;
 `;

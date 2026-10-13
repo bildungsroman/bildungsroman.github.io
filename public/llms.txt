@@ -1,0 +1,39 @@
+# Anna Spysz
+
+> Anna Spysz is a Developer Advocate at Stripe and a full-stack software engineer based in Portland, Oregon. She previously built serverless developer tools at AWS (Application Composer) and Stackery. She works mostly in React, TypeScript, Next.js, Node.js, and AWS serverless, and cares a lot about good documentation and making software approachable for beginners.
+
+Before software, Anna was a writer, editor, and Polish-to-English translator: co-author of *The Essential Guide to Being Polish* (2013) and former editor-in-chief of the Krakow Post.
+
+## Site sections
+
+- [About](https://annaspysz.com/): Background, career, and interests
+- [Coding](https://annaspysz.com/coding): Apps she has built, featured GitHub repositories, and her tech stack
+- [Speaking](https://annaspysz.com/speaking): Upcoming talks, past talks, interviews, podcasts, and selected blog posts
+- [Writing](https://annaspysz.com/writing): Books, journalism, and translation work
+- [Resume (PDF)](https://annaspysz.com/resume.pdf)
+
+## Apps
+
+- [iffapp](https://iffapp.com): A "get-to-do" list rather than a to-do list. You get to do a thing if and only if you complete the tasks you need to do first. Built with Next.js, React, Clerk, Prisma, and Stripe.
+- [Content's Not Dead](https://contentsnotdead.com): An open-source, themeable content platform monetized with Stripe subscriptions and per-content Machine Payments Protocol (MPP) payments, for humans and agents.
+- [Stripe Projects Leaderboard](https://projects.dev/leaderboard): Discover, upvote, and share the projects developers have built with Stripe Projects.
+
+## Talks
+
+- [The best features of Application Composer you aren't using](https://www.youtube.com/watch?v=uF-vTM6wTY0) (Believe In Serverless)
+- [Serverless is for Pragmatists: CI/CD in the Age of IaC](https://www.youtube.com/watch?v=NFRJuFlBFzc) (Six Feet Up, with Chase Douglas)
+
+## Interviews
+
+- [AWS On Air: Code Corner ft. Anna Spysz, TypeScript, App Composer, and Generative AI!](https://www.youtube.com/watch?v=lzRyDTdkCSU) (AWS On Air)
+- [DevOps Party Games - The Final Countdown](https://devopspartygames.com/episodes/s02e08) (podcast)
+- [Screaming in the Cloud, Episode 62: Serverless Storytelling](https://podcasts.apple.com/us/podcast/episode-62-serverless-storytelling-with-anna-spysz/id1361244178?i=1000440051998) (podcast with Corey Quinn)
+- [Talking Serverless](https://open.spotify.com/episode/3ftNup9rzqRzYzMSYk3dPc) (podcast with Ryan Jones)
+
+## Contact
+
+- Email: anna@annaspysz.com
+- GitHub: https://github.com/bildungsroman
+- LinkedIn: https://www.linkedin.com/in/annaspysz/
+- Bluesky: https://bsky.app/profile/annaspies.dev
+- DEV: https://dev.to/annaspies

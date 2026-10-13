@@ -1,179 +1,127 @@
-import React from "react";
-import GitHubButton from "react-github-btn";
-import { FiStar, FiKey } from "react-icons/fi";
+import { FiStar, FiGitBranch, FiKey, FiExternalLink } from "react-icons/fi";
 import styled from "styled-components";
-import variables from "../data/variables";
+import { Card } from "./common";
 
-// Styled components for Repository
-const RepoContent = styled.div`
-  border-radius: 0.5rem;
-  border: 1px solid #e1e4e8;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  font-size: 16;
-  transition: all 200ms ease-in-out;
-  &:hover {
-    box-shadow: 0px 0px 36px 25px rgb(0 0 0 / 3%);
-    h2 a {
-      color: ${variables.primary};
-    }
-  }
-`;
-
-const RepoHead = styled.div`
+const RepoCard = styled(Card)`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
 `;
 
-const Title = styled.h2`
-  margin-bottom: 0;
-  margin-top: 0;
-  font-size: 1.4rem;
-  font-style: italic;
-  font-family: "Lato";
-  font-weight: 100;
-  @media (max-width: ${variables.breakpointPhone}) {
-    font-size: 1rem;
+const Title = styled.h3`
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 900;
+  a {
+    color: var(--heading);
+  }
+  a:hover {
+    color: var(--primary);
   }
 `;
 
-const Text = styled.p`
-  margin-bottom: 1rem;
-  margin-top: 0.25rem;
+const Description = styled.p`
+  margin: 0;
+  flex: 1;
   font-size: 1rem;
-  text-transform: capitalize;
-  @media (max-width: ${variables.breakpointPhone}) {
-    font-size: 0.9rem;
-  }
+  color: var(--text-muted);
 `;
 
-const FooterItem = styled.span`
-  margin-right: 0.89rem;
-  margin-bottom: 1rem;
+const Meta = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   font-size: 0.9rem;
-  font-family: "Lato";
-  vertical-align: middle;
-  display: inline-block;
-  > * {
-    vertical-align: middle;
+  color: var(--text-muted);
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
   }
-  > svg {
-    width: 16px;
-    height: 16px;
-    &.star {
-      fill: #fbc02d;
-      stroke: #ffc107;
-    }
-  }
-  @media (max-width: ${variables.breakpointPhone}) {
-    margin-right: 0.49rem;
-    font-size: 0.7rem;
-    > svg {
-      width: 12px;
-      height: 12px;
-    }
+  .star {
+    color: var(--accent);
   }
 `;
 
-const Circle = styled.span`
+const LanguageDot = styled.span`
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  position: relative;
-  vertical-align: initial;
+  background-color: ${(props) => props.$color};
 `;
 
-// Repository Header Component
-const RepositoryHeader = ({ repo }) => {
-  return (
-    <RepoHead>
-      <Title>
-        <a
-          href={`https://github.com${repo.resourcePath}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {repo.name}
-        </a>
-      </Title>
-      <GitHubButton
-        href={`https://github.com${repo.resourcePath}`}
-        data-icon="Star"
-        data-size="large"
-        aria-label="Star repo on GitHub"
-      >
-        Star
-      </GitHubButton>
-    </RepoHead>
+const HomepageLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+`;
+
+const formatUpdated = (updatedAt) => {
+  const daysAgo = Math.round(
+    (new Date(updatedAt) - new Date()) / (1000 * 60 * 60 * 24)
   );
-};
-
-// Repository Description Component
-const RepositoryDescription = ({ repo }) => (
-  <div>
-    <Text>
-      {repo.description || "This repo does not have a description"}
-
-      {repo.homepageUrl && (
-        <>
-          {" -"} <a href={repo.homepageUrl}>{repo.homepageUrl}</a>
-        </>
-      )}
-    </Text>
-  </div>
-);
-
-// Repository Footer Component
-const RepositoryFooter = ({ repo }) => {
-  const language = repo.languages.edges[0];
-  const timeAgo = new Date(repo.updatedAt) - new Date(); // Fixed typo: updatedA -> updatedAt
-  const daysAgo = Math.floor(timeAgo / (1000 * 60 * 60 * 24)); // ms to days
-  let updatedAt = repo.updatedAt.slice(0, 10);
-
-  if (daysAgo > -21) {
-    updatedAt = new Intl.RelativeTimeFormat("en", { style: "narrow" }).format(
+  if (daysAgo > -30) {
+    return new Intl.RelativeTimeFormat("en", { numeric: "auto" }).format(
       daysAgo,
       "day"
     );
   }
+  return new Date(updatedAt).toLocaleDateString("en", {
+    month: "short",
+    year: "numeric",
+  });
+};
 
-  return (
-    <div style={{ color: `#586069`, fontSize: 12 }}>
-      <FooterItem>
-        <Circle
-          style={{
-            backgroundColor: language ? language.node.color : "#000",
-          }}
-        />{" "}
-        {language ? language.node.name : "undefined"}{" "}
-        {/* Fixed typo: undifined -> undefined */}
-      </FooterItem>
-      <FooterItem>
-        <FiStar className="star" />
-        <span> {repo.stargazers.totalCount} </span>
-      </FooterItem>
-      {repo.licenseInfo && (
-        <FooterItem>
-          <FiKey />
-          <span> {repo.licenseInfo.name} </span>
-        </FooterItem>
+const Repository = ({ repo }) => (
+  <RepoCard as="article">
+    <Title>
+      <a href={repo.url} target="_blank" rel="noopener noreferrer">
+        {repo.name}
+      </a>
+    </Title>
+    <Description>
+      {repo.description || "This repo does not have a description."}
+    </Description>
+    {repo.homepageUrl && (
+      <HomepageLink
+        href={repo.homepageUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FiExternalLink aria-hidden="true" />
+        {repo.homepageUrl.replace(/^https?:\/\/(www\.)?/, "")}
+      </HomepageLink>
+    )}
+    <Meta>
+      {repo.primaryLanguage && (
+        <li>
+          <LanguageDot $color={repo.primaryLanguage.color} />
+          {repo.primaryLanguage.name}
+        </li>
       )}
-      <FooterItem>Updated: {updatedAt}</FooterItem>
-      {repo.homepageUrl && <FooterItem />}{" "}
-    </div>
-  );
-};
-
-// Main Repository Component
-const Repository = ({ repo }) => {
-  return (
-    <RepoContent>
-      <RepositoryHeader repo={repo} />
-      <RepositoryDescription repo={repo} />
-      <RepositoryFooter repo={repo} />
-    </RepoContent>
-  );
-};
+      <li aria-label={`${repo.stargazerCount} stars`}>
+        <FiStar className="star" aria-hidden="true" />
+        {repo.stargazerCount}
+      </li>
+      <li aria-label={`${repo.forkCount} forks`}>
+        <FiGitBranch aria-hidden="true" />
+        {repo.forkCount}
+      </li>
+      {repo.licenseInfo && (
+        <li>
+          <FiKey aria-hidden="true" />
+          {repo.licenseInfo.name}
+        </li>
+      )}
+      <li>Updated {formatUpdated(repo.updatedAt)}</li>
+    </Meta>
+  </RepoCard>
+);
 
 export default Repository;

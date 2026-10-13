@@ -1,81 +1,64 @@
 # annaspysz.com
 
-A personal portfolio website built with Vite + React.
+Personal portfolio for Anna Spysz, built with Vite and React.
 
-View it at [annaspysz.com](https://annaspysz.com)
+View it at [annaspysz.com](https://annaspysz.com).
 
 ## Development
 
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm
-
-### Getting Started
-
-1. Clone the repository:
+Node.js 22.22 or newer is required.
 
 ```bash
 git clone https://github.com/bildungsroman/bildungsroman.github.io.git
 cd bildungsroman.github.io
-```
-
-2. Install dependencies:
-
-```bash
 npm install
-```
-
-3. Start the development server:
-
-```bash
 npm run dev
 ```
 
-The site will be available at `http://localhost:3000`
+The dev server runs at `http://localhost:3000`.
 
-### Available Scripts
+### Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues automatically
-- `npm run format` - Format code with Prettier
+- `npm run dev` starts the dev server
+- `npm run build` fetches pinned repositories, then builds to `dist/`
+- `npm run preview` serves the production build
+- `npm run lint` runs ESLint
+- `npm run fix` formats with Prettier and applies ESLint fixes
+- `npm run fetch-repos` refreshes `src/data/repos.json` (needs `GH_TOKEN` or `GITHUB_TOKEN`)
+- `npm run optimize-images -- <files> --out src/assets/img` converts images to WebP
 
-## Deployment
+Without a GitHub token, the build keeps the committed `repos.json`. See [DEPLOYMENT.md](DEPLOYMENT.md) for GitHub Pages, the weekly rebuild, and the old `VITE_GITHUB_API_TOKEN` secret.
 
-The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
+## Site
 
-### Manual Deployment
+Pages are About, Coding, Speaking, and Writing. Light and dark colors follow the browser setting. The header toggle overrides that for the current tab only.
 
-To build and deploy manually:
+The Coding page lists apps from `src/data/apps.js` and pinned GitHub repositories from `src/data/repos.json`. The Speaking page lists upcoming talks, recorded talks, and interviews from `src/data/speaking.js`. YouTube players load when a visitor clicks play.
 
-1. Build the project:
+For agents and crawlers, `public/` includes `llms.txt`, `sitemap.xml`, and `robots.txt`. `index.html` has the default title, description, Open Graph tags, and JSON-LD. Per-page titles update in the browser after navigation.
 
-```bash
-npm run build
-```
+When adding an app, talk, or interview, add a matching line to `public/llms.txt`.
 
-2. The built files will be in the `dist/` directory, ready for deployment to any static hosting service.
+## Stack
 
-## Technology Stack
+- React 19
+- Vite 8
+- React Router 8
+- styled-components
+- Font Awesome and React Icons
+- GitHub Pages
 
-- **Framework**: React 18
-- **Build Tool**: Vite
-- **Styling**: Styled Components
-- **Routing**: React Router
-- **Icons**: FontAwesome + React Icons
-- **Deployment**: GitHub Pages
-
-## Project Structure
+## Project structure
 
 ```
+public/                 # llms.txt, sitemap, robots, resume, SPA 404
+scripts/                # fetch-repos.mjs, optimize-images.mjs
 src/
-├── components/          # Reusable UI components
-├── contexts/           # React contexts (theme, etc.)
-├── data/              # Static data and configuration
-├── pages/             # Page components
-├── services/          # API services
-└── App.jsx            # Main application component
+├── components/         # Layout, cards, embeds
+├── contexts/           # Theme
+├── data/               # Apps, speaking, repos, site copy
+├── hooks/              # usePageMeta
+├── pages/              # Route pages
+├── styles/             # Theme tokens
+└── App.jsx
 ```

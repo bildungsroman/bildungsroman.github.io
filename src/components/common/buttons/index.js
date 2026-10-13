@@ -1,42 +1,28 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import colors from "../../../data/variables";
+import styled, { css } from "styled-components";
+import { Link } from "react-router";
 
-const buttonStyles = `
-  cursor: pointer;
-  margin: 10% 0%;
-  font-family: "Lato";
-  font-size: inherit;
-  text-align: center;
+const buttonStyles = css`
+  display: inline-block;
+  min-width: 12.5rem;
+  padding: 0.95rem 1.5rem 0.9rem;
+  border: 4px solid var(--brand);
+  background: var(--surface);
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 400;
   letter-spacing: 3px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  border: 4px solid ${colors.primary};
-  color: ${colors.primary};
-  background: ${colors.button.light};
-  outline: none;
-  position: relative;
-  display: inline-block;
-  padding: 15px 10px 14px;
   cursor: pointer;
-  width: auto;
-  min-width: 200px;
-  &::after {
-    min-width: 200px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 4px solid ${colors.primary};
-    background-color: ${colors.primary};
-    left: 4px;
-    top: 9px;
-    z-index: -1;
-    content: "";
-    transition: all 0.5s;
+  box-shadow: 8px 10px 0 var(--button-shadow);
+  transition: box-shadow 500ms ease;
+  &:hover {
+    color: var(--primary);
+    box-shadow: -4px 4px 0 var(--button-shadow);
   }
-  &:hover:after {
-    top: 0px;
-    left: -4px;
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 `;
 

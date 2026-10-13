@@ -1,0 +1,81 @@
+/*
+  Palette tokens. data-theme is set before first paint by the inline script in
+  index.html (from the browser's color-scheme preference or a per-session
+  override) and kept in sync by ThemeContext.
+*/
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  /*
+    --brand is the logo blue, used for non-text accents. It is too light for
+    body-size text on white, so text and buttons use the deeper --primary.
+  */
+  --brand: #308ac1;
+  --bg: #ffffff;
+  --bg-glow-1: transparent;
+  --bg-glow-2: transparent;
+  --bg-glow-3: transparent;
+  --surface: #ffffff;
+  --surface-2: #eaf3f9;
+  --text: #1c2430;
+  --text-muted: #4a5565;
+  --heading: #1c2430;
+  --primary: #1f6fa0;
+  --primary-strong: #185a82;
+  --accent: #185a82;
+  --secondary: #1f6fa0;
+  --on-primary: #ffffff;
+  --border: rgb(28 36 48 / 10%);
+  --shadow: 0 1px 2px rgb(28 36 48 / 6%), 0 8px 24px rgb(28 36 48 / 6%);
+  --shadow-lift: 0 18px 40px rgb(48 138 193 / 16%);
+  --gradient: linear-gradient(135deg, #308ac1, #8cc4e6);
+  --button-gradient: #1f6fa0;
+  --button-shadow: #308ac1;
+  --on-button: #ffffff;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --brand: #a78bfa;
+  --bg: #14112a;
+  --bg-glow-1: rgb(167 139 250 / 18%);
+  --bg-glow-2: rgb(251 113 133 / 14%);
+  --bg-glow-3: rgb(45 212 191 / 10%);
+  --surface: #1f1b3a;
+  --surface-2: #2a2550;
+  --text: #f4f1ff;
+  --text-muted: #c4bedf;
+  --heading: #ffffff;
+  --primary: #a78bfa;
+  --primary-strong: #c4b5fd;
+  --accent: #fb7185;
+  --secondary: #2dd4bf;
+  --on-primary: #14112a;
+  --border: rgb(244 241 255 / 12%);
+  --shadow: 0 1px 2px rgb(0 0 0 / 30%), 0 8px 24px rgb(0 0 0 / 25%);
+  --shadow-lift: 0 18px 40px rgb(167 139 250 / 22%);
+  --gradient: linear-gradient(120deg, #a78bfa 0%, #fb7185 60%, #fbbf24 100%);
+  --button-gradient: linear-gradient(120deg, #a78bfa, #fb7185, #a78bfa);
+  --button-shadow: #fb7185;
+  --on-button: #14112a;
+}
+
+html {
+  background-color: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 0% 0%, var(--bg-glow-1), transparent 40rem),
+    radial-gradient(circle at 100% 15%, var(--bg-glow-2), transparent 35rem),
+    radial-gradient(circle at 50% 100%, var(--bg-glow-3), transparent 40rem),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: "Lato", system-ui, sans-serif;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}

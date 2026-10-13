@@ -1,217 +1,213 @@
 import styled from "styled-components";
+import { FiCalendar, FiHeadphones } from "react-icons/fi";
 import SectionIntro from "../components/SectionIntro";
-import { ContainerLayout } from "../components/common";
+import VideoCard from "../components/VideoCard";
 import { Intro } from "../components/styled/repository";
-import speakingImage from "../assets/img/speaking-banner.png";
+import {
+  upcomingTalks,
+  talks,
+  interviews,
+  audioInterviews,
+  blogPosts,
+} from "../data/speaking";
+import speakingImage from "../assets/img/speaking-banner.webp";
+import { usePageMeta } from "../hooks/usePageMeta";
 
-const Avatar = styled.img`
-  width: 100%;
+const Banner = styled.img`
   display: block;
-  margin: 0 auto 2rem auto;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 3rem;
+  box-shadow: var(--shadow-lift);
+`;
+
+const SectionHeading = styled.h2`
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-muted);
+  }
+`;
+
+const VideoGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 26rem), 1fr));
+  gap: 1.75rem;
+`;
+
+const SubHeading = styled.h3`
+  margin: 2.5rem 0 1rem;
+  font-size: 1.3rem;
+`;
+
+const TalkTitle = styled.span`
+  font-weight: 900;
+`;
+
+const LinkList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+  svg {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    color: var(--accent);
+  }
+  a {
+    font-weight: 900;
+  }
+  small {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
 `;
 
 const Speaking = () => {
+  usePageMeta({
+    title: "Speaking",
+    description:
+      "Upcoming talks, past talks, interviews, podcasts, and blog posts by Anna Spysz on agentic commerce, developer tools, and payments.",
+    path: "/speaking",
+  });
   return (
     <>
       <SectionIntro
         title="Speaking"
-        subtitle="Occasional Serverless Thought-Haver&trade;"
+        subtitle="Occasional Serverless Thought-Haver™"
       />
-      <Avatar
+      <Banner
         src={speakingImage}
-        alt="Holding a beer while doing a talk. Possibly one of my proudest moments"
+        alt="Anna speaking on stage at a Stripe Developer Meetup in San Francisco"
+        width="961"
+        height="347"
       />
-      <ContainerLayout>
+      <Intro>
+        I'm passionate about making modern application development accessible to
+        users at all levels, particularly beginners and those from
+        non-traditional backgrounds. At AWS, I had the privilege of speaking at
+        internal conferences such as WebDevCon, as well as making guest
+        appearances on several AWS On Air segments. Now at Stripe, speaking is
+        literally my job, so expect to see me at a{" "}
+        <a
+          className="lined-link"
+          href="https://www.meetup.com/pro/stripe/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Stripe meetup
+        </a>{" "}
+        or conference near you!
+      </Intro>
+
+      <section id="upcoming" aria-labelledby="upcoming-heading">
+        <SectionHeading id="upcoming-heading">
+          Upcoming talks <span>Where I'll be next</span>
+        </SectionHeading>
+        {upcomingTalks.length > 0 ? (
+          <LinkList>
+            {upcomingTalks.map(({ title, event, date, location, url }) => (
+              <li key={`${date}-${title}`}>
+                <FiCalendar aria-hidden="true" />
+                <div>
+                  {url ? (
+                    <a href={url} target="_blank" rel="noreferrer">
+                      {title}
+                    </a>
+                  ) : (
+                    <TalkTitle>{title}</TalkTitle>
+                  )}
+                  <small>
+                    {[date, event, location].filter(Boolean).join(" · ")}
+                  </small>
+                </div>
+              </li>
+            ))}
+          </LinkList>
+        ) : (
+          <Intro>Nothing on the calendar yet.</Intro>
+        )}
+      </section>
+
+      <section aria-labelledby="talks-heading">
+        <SectionHeading id="talks-heading">
+          Talks <span>Conferences, meetups, and demos</span>
+        </SectionHeading>
+        <VideoGrid>
+          {talks.map((video) => (
+            <VideoCard key={video.youtubeId} video={video} />
+          ))}
+        </VideoGrid>
+      </section>
+
+      <section aria-labelledby="interviews-heading">
+        <SectionHeading id="interviews-heading">
+          Interviews <span>Livestreams, shows, and podcasts</span>
+        </SectionHeading>
+        <VideoGrid>
+          {interviews.map((video) => (
+            <VideoCard key={video.youtubeId} video={video} />
+          ))}
+        </VideoGrid>
+        <SubHeading>Podcasts</SubHeading>
+        <LinkList>
+          {audioInterviews.map(({ title, url, show }) => (
+            <li key={url}>
+              <FiHeadphones aria-hidden="true" />
+              <div>
+                <a href={url} target="_blank" rel="noreferrer">
+                  {title}
+                </a>
+                <small>{show}</small>
+              </div>
+            </li>
+          ))}
+        </LinkList>
+      </section>
+
+      <section aria-labelledby="blog-heading">
+        <SectionHeading id="blog-heading">Selected blog posts</SectionHeading>
         <Intro>
-          I'm passionate about making modern application development accessible
-          to users at all levels, particularly beginners and those from
-          non-traditional backgrounds. At AWS, I had the privilege of speaking
-          at internal conferences such as WebDevCon in 2022, 2023, 2024, and
-          2025, as well as making guest appearances on several AWS On Air
-          segments. Now at Stripe, speaking is literally my job, so expect to
-          see me at a{" "}
+          In addition to speaking, I love developing and writing tutorials and
+          blog posts, the sillier the better. You can see a lot of my work on{" "}
           <a
-            className="text-primary lined-link"
-            href="https://www.meetup.com/pro/stripe/"
+            className="lined-link"
+            href="https://www.stripe.dev/blog/"
             target="_blank"
             rel="noreferrer"
           >
-            Stripe meetup
-          </a>{" "}
-          near you!
-        </Intro>
-        <h2>Selected Talks and Demos</h2>
-        <iframe
-          width="100%"
-          height="700"
-          src="https://www.youtube-nocookie.com/embed/lzRyDTdkCSU"
-          title="AWS On Air: Code Corner ft. Anna Spysz, TypeScript, App Composer, and Generative AI!"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-        <br />
-        <br />
-        <iframe
-          width="100%"
-          height="700"
-          src="https://www.youtube-nocookie.com/embed/uF-vTM6wTY0"
-          title="The best features of Application Composer you aren't using"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-        <br />
-        <br />
-        <iframe
-          width="100%"
-          height="700"
-          src="https://www.youtube-nocookie.com/embed/NFRJuFlBFzc"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-        <br />
-        <h2>Podcast/Twitch appearances</h2>
-        <Intro>
-          <ul>
-            <li>
-              <a
-                href="https://devopspartygames.com/episodes/s02e08"
-                target="_blank"
-                rel="noreferrer"
-              >
-                DevOps Party Games - The Final Countdown
-              </a>{" "}
-              by{" "}
-              <a
-                href="https://devopspartygames.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                DevOps Party Games
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://podcasts.apple.com/us/podcast/episode-62-serverless-storytelling-with-anna-spysz/id1361244178?i=1000440051998"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Screaming in the Cloud
-              </a>{" "}
-              with Corey Quinn
-            </li>
-            <li>
-              <a
-                href="https://open.spotify.com/episode/3ftNup9rzqRzYzMSYk3dPc"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Talking Serverless
-              </a>{" "}
-              with Ryan Jones
-            </li>
-          </ul>
-        </Intro>
-        <h2>Selected Blog Posts</h2>
-        <Intro>
-          In addition to speaking, I love developing and writing tutorials, the
-          sillier the better. You can see a lot of my work on the{" "}
-          <a
-            href="https://www.stackery.io/blog/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Stackery Blog
+            Stripe Dot Dev
           </a>
-          , and here's a few select posts:
-          <ul>
-            <li>
-              <a
-                href="https://aws.amazon.com/blogs/compute/using-generative-infrastructure-as-code-with-application-composer/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Using generative infrastructure as code with Application
-                Composer
-              </a>{" "}
-              @ the AWS Compute Blog
-            </li>
-            <li>
-              <a
-                href="https://dev.to/annaspies/entering-the-world-of-ai-mechanics-3776"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Entering the World of AI Mechanics
-              </a>{" "}
-              @ Dev
-            </li>
-            <li>
-              <a
-                href="https://dev.to/annaspies/rip-cra-now-what-1h9a"
-                target="_blank"
-                rel="noreferrer"
-              >
-                My hands-on guide to migrating from CRA to Next.js
-              </a>{" "}
-              @ Dev
-            </li>
-            <li>
-              <a
-                href="https://dev.to/annaspies/global-state-in-gatsby-or-having-and-eating-your-cake-too-3bjj"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Global State in Gatsby, or Having and Eating Your Cake, Too
-              </a>{" "}
-              @ Dev
-            </li>
-            <li>
-              <a
-                href="https://dev.to/annaspies/alexa-how-can-i-win-an-echo-and-learn-to-build-an-alexa-app-52c"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Alexa, How Can I Win an Echo (and learn to build an Alexa app)?
-              </a>{" "}
-              @ Dev
-            </li>
-            <li>
-              <a
-                href="https://dev.to/annaspies/i-used-cypress-as-an-xbox-web-scraper-and-i-regret-nothing-1bn4"
-                target="_blank"
-                rel="noreferrer"
-              >
-                I used Cypress as an Xbox web scraper and I regret nothing{" "}
-              </a>{" "}
-              @ Dev
-            </li>
-            <li>
-              <a
-                href="https://www.stackery.io/blog/top-10-deployment-errors/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Top 10 Serverless Deployment Errors (and How to Fix Them)
-              </a>{" "}
-              @ Stackery
-            </li>
-            <li>
-              <a
-                href="https://www.stackery.io/blog/serverless-gong/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Building Slack Bots for Fun: A Serverless Release Gong
-              </a>{" "}
-              @ Stackery
-            </li>
-          </ul>
+          , and here are a few select posts:
         </Intro>
-      </ContainerLayout>
+        <LinkList>
+          {blogPosts.map(({ title, url, publication }) => (
+            <li key={url}>
+              <div>
+                <a href={url} target="_blank" rel="noreferrer">
+                  {title}
+                </a>
+                <small>{publication}</small>
+              </div>
+            </li>
+          ))}
+        </LinkList>
+      </section>
     </>
   );
 };

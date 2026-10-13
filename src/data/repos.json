@@ -1,0 +1,64 @@
+[
+  {
+    "name": "iffapp.com",
+    "description": "iffapp is an online \"get-to-do\" list rather than a to-do list. You get to do a thing if and only if you complete the task or tasks you need to do.",
+    "url": "https://github.com/bildungsroman/iffapp.com",
+    "homepageUrl": "http://iffapp.com",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "updatedAt": "2025-07-16T18:13:48Z",
+    "primaryLanguage": {
+      "name": "Python",
+      "color": "#3572A5"
+    },
+    "licenseInfo": null
+  },
+  {
+    "name": "stripe-projects-visualizer",
+    "description": "Visualize the architecture of a Stripe Project in the CLI",
+    "url": "https://github.com/bildungsroman/stripe-projects-visualizer",
+    "homepageUrl": "https://www.npmjs.com/package/stripe-projects-visualizer",
+    "stargazerCount": 4,
+    "forkCount": 0,
+    "updatedAt": "2026-08-07T22:24:21Z",
+    "primaryLanguage": {
+      "name": "TypeScript",
+      "color": "#3178c6"
+    },
+    "licenseInfo": {
+      "name": "MIT License"
+    }
+  },
+  {
+    "name": "chat-to-meme",
+    "description": "A ChatGPT-based meme generator. Is this a good idea? No! But did I do it anyway? You betcha!",
+    "url": "https://github.com/bildungsroman/chat-to-meme",
+    "homepageUrl": null,
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "updatedAt": "2024-05-22T00:57:18Z",
+    "primaryLanguage": {
+      "name": "TypeScript",
+      "color": "#3178c6"
+    },
+    "licenseInfo": {
+      "name": "MIT License"
+    }
+  },
+  {
+    "name": "aws-vpc-eradicator",
+    "description": "Keep your AWS bills under control",
+    "url": "https://github.com/bildungsroman/aws-vpc-eradicator",
+    "homepageUrl": "",
+    "stargazerCount": 4,
+    "forkCount": 2,
+    "updatedAt": "2020-05-21T00:31:46Z",
+    "primaryLanguage": {
+      "name": "JavaScript",
+      "color": "#f1e05a"
+    },
+    "licenseInfo": {
+      "name": "MIT License"
+    }
+  }
+]

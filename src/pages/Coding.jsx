@@ -1,41 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import SectionIntro from "../components/SectionIntro";
 import Repository from "../components/Repository";
-import { ContainerLayout } from "../components/common";
+import AppCard from "../components/AppCard";
+import { CardGrid } from "../components/common";
 import { RepoGrid, Intro } from "../components/styled/repository";
-import githubApiService from "../services/githubApi";
+import repositories from "../data/repos.json";
+import apps from "../data/apps";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const Coding = () => {
-  const [repositories, setRepositories] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchRepositories = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const data = await githubApiService.getPinnedRepositories();
-        setRepositories(data.viewer.repositories.nodes);
-      } catch (err) {
-        console.error("Failed to fetch repositories:", err);
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchRepositories();
-  }, []);
-
+  usePageMeta({
+    title: "Coding",
+    description:
+      "Apps Anna Spysz has built, plus her featured GitHub repositories and the stack she works in: React, TypeScript, Next.js, and AWS serverless.",
+    path: "/coding",
+  });
   return (
     <>
       <SectionIntro
         title="Coding"
         subtitle="Frontend is my jam, teaching is my passion"
       />
-      <ContainerLayout>
+      <section>
         <Intro>
           I'm a dedicated full-stack engineer with a passion for frontend
           development and serverless technologies. Recently, I've been expanding
@@ -72,28 +58,27 @@ const Coding = () => {
           certification lounge at re:Invent 🤷‍♀️☕). One day I hope AWS makes a
           serverless developer certification, which I will eagerly get.
         </Intro>
-        <Intro>Check out some of my featured repositories below:</Intro>
+      </section>
 
-        {loading && <Intro>Loading repositories...</Intro>}
+      <section id="apps" aria-labelledby="apps-heading">
+        <h2 id="apps-heading">My apps</h2>
+        <Intro>Things I've built and shipped that you can use right now:</Intro>
+        <CardGrid>
+          {apps.map((app) => (
+            <AppCard key={app.url} app={app} />
+          ))}
+        </CardGrid>
+      </section>
 
-        {error && (
-          <Intro style={{ color: "#d73a49" }}>
-            Failed to load repositories: {error}
-          </Intro>
-        )}
-
-        {!loading && !error && repositories.length > 0 && (
-          <RepoGrid>
-            {repositories.map((repo, index) => (
-              <Repository key={index} repo={repo} />
-            ))}
-          </RepoGrid>
-        )}
-
-        {!loading && !error && repositories.length === 0 && (
-          <Intro>No repositories found.</Intro>
-        )}
-      </ContainerLayout>
+      <section id="repositories" aria-labelledby="repositories-heading">
+        <h2 id="repositories-heading">Featured repositories</h2>
+        <Intro>A few of my pinned repositories on GitHub:</Intro>
+        <RepoGrid>
+          {repositories.map((repo) => (
+            <Repository key={repo.name} repo={repo} />
+          ))}
+        </RepoGrid>
+      </section>
     </>
   );
 };

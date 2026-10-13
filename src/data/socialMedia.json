@@ -1,27 +1,27 @@
 [
   {
-    "id": 0,
-    "name": "bluesky",
+    "id": "bluesky",
+    "name": "Bluesky",
     "url": "https://bsky.app/profile/annaspies.dev"
   },
   {
-    "id": 1,
-    "name": "linkedin",
+    "id": "linkedin",
+    "name": "LinkedIn",
     "url": "https://www.linkedin.com/in/annaspysz/"
   },
   {
-    "id": 2,
-    "name": "github",
+    "id": "github",
+    "name": "GitHub",
     "url": "https://github.com/bildungsroman"
   },
   {
-    "id": 3,
-    "name": "stack-overflow",
+    "id": "stack-overflow",
+    "name": "Stack Overflow",
     "url": "https://stackoverflow.com/users/9245716/bildungsroman?tab=profile"
   },
   {
-    "id": 4,
-    "name": "dev.to",
+    "id": "dev",
+    "name": "DEV",
     "url": "https://dev.to/annaspies"
   }
 ]

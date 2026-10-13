@@ -31,3 +31,6 @@ node_modules/
 # Mac files
 .DS_Store
 .cache/
+
+# Bundle visualizer report
+stats.html
