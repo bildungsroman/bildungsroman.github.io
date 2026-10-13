@@ -8,7 +8,7 @@ Before software, Anna was a writer, editor, and Polish-to-English translator: co
 
 - [About](https://annaspysz.com/): Background, career, and interests
 - [Coding](https://annaspysz.com/coding): Apps she has built, featured GitHub repositories, and her tech stack
-- [Speaking](https://annaspysz.com/speaking): Talks, interviews, podcasts, and selected blog posts
+- [Speaking](https://annaspysz.com/speaking): Upcoming talks, past talks, interviews, podcasts, and selected blog posts
 - [Writing](https://annaspysz.com/writing): Books, journalism, and translation work
 - [Resume (PDF)](https://annaspysz.com/resume.pdf)
 

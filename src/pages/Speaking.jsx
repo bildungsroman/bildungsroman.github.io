@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { FiHeadphones } from "react-icons/fi";
+import { FiCalendar, FiHeadphones } from "react-icons/fi";
 import SectionIntro from "../components/SectionIntro";
 import VideoCard from "../components/VideoCard";
 import { Intro } from "../components/styled/repository";
 import {
+  upcomingTalks,
   talks,
   interviews,
   audioInterviews,
@@ -42,6 +43,10 @@ const SubHeading = styled.h3`
   font-size: 1.3rem;
 `;
 
+const TalkTitle = styled.span`
+  font-weight: 900;
+`;
+
 const LinkList = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
@@ -77,7 +82,7 @@ const Speaking = () => {
   usePageMeta({
     title: "Speaking",
     description:
-      "Talks, interviews, podcasts, and blog posts by Anna Spysz on serverless, developer tools, and payments.",
+      "Upcoming talks, past talks, interviews, podcasts, and blog posts by Anna Spysz on agentic commerce, developer tools, and payments.",
     path: "/speaking",
   });
   return (
@@ -88,17 +93,17 @@ const Speaking = () => {
       />
       <Banner
         src={speakingImage}
-        alt="Anna on stage holding a beer while giving a talk"
-        width="1705"
-        height="546"
+        alt="Anna speaking on stage at a Stripe Developer Meetup in San Francisco"
+        width="961"
+        height="347"
       />
       <Intro>
         I'm passionate about making modern application development accessible to
         users at all levels, particularly beginners and those from
         non-traditional backgrounds. At AWS, I had the privilege of speaking at
-        internal conferences such as WebDevCon in 2022, 2023, 2024, and 2025, as
-        well as making guest appearances on several AWS On Air segments. Now at
-        Stripe, speaking is literally my job, so expect to see me at a{" "}
+        internal conferences such as WebDevCon, as well as making guest
+        appearances on several AWS On Air segments. Now at Stripe, speaking is
+        literally my job, so expect to see me at a{" "}
         <a
           className="lined-link"
           href="https://www.meetup.com/pro/stripe/"
@@ -107,8 +112,37 @@ const Speaking = () => {
         >
           Stripe meetup
         </a>{" "}
-        near you!
+        or conference near you!
       </Intro>
+
+      <section id="upcoming" aria-labelledby="upcoming-heading">
+        <SectionHeading id="upcoming-heading">
+          Upcoming talks <span>Where I'll be next</span>
+        </SectionHeading>
+        {upcomingTalks.length > 0 ? (
+          <LinkList>
+            {upcomingTalks.map(({ title, event, date, location, url }) => (
+              <li key={`${date}-${title}`}>
+                <FiCalendar aria-hidden="true" />
+                <div>
+                  {url ? (
+                    <a href={url} target="_blank" rel="noreferrer">
+                      {title}
+                    </a>
+                  ) : (
+                    <TalkTitle>{title}</TalkTitle>
+                  )}
+                  <small>
+                    {[date, event, location].filter(Boolean).join(" · ")}
+                  </small>
+                </div>
+              </li>
+            ))}
+          </LinkList>
+        ) : (
+          <Intro>Nothing on the calendar yet.</Intro>
+        )}
+      </section>
 
       <section aria-labelledby="talks-heading">
         <SectionHeading id="talks-heading">
@@ -149,15 +183,15 @@ const Speaking = () => {
       <section aria-labelledby="blog-heading">
         <SectionHeading id="blog-heading">Selected blog posts</SectionHeading>
         <Intro>
-          In addition to speaking, I love developing and writing tutorials, the
-          sillier the better. You can see a lot of my work on the{" "}
+          In addition to speaking, I love developing and writing tutorials and
+          blog posts, the sillier the better. You can see a lot of my work on{" "}
           <a
             className="lined-link"
-            href="https://www.stackery.io/blog/"
+            href="https://www.stripe.dev/blog/"
             target="_blank"
             rel="noreferrer"
           >
-            Stackery Blog
+            Stripe Dot Dev
           </a>
           , and here are a few select posts:
         </Intro>

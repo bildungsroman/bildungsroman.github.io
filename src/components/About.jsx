@@ -66,7 +66,7 @@ const Portrait = styled.figure`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 15%;
   }
   @media (max-width: ${variables.breakpointPhone}) {
     max-width: 22rem;
@@ -102,7 +102,7 @@ const About = () => {
             serverless, and making developer tools feel delightful.
           </Lead>
           <Actions>
-            <ButtonLink to="/coding#apps">See my apps</ButtonLink>
+            <ButtonLink to="/speaking#upcoming">See me speak</ButtonLink>
             <ResumeLink
               className="lined-link"
               href="/resume.pdf"
@@ -116,9 +116,9 @@ const About = () => {
         <Portrait>
           <img
             src={profileImage}
-            alt="Anna Spysz smiling and holding a sign that says Hi, I'm Anna"
+            alt="Anna Spysz headshot"
             width="1200"
-            height="625"
+            height="1800"
             fetchPriority="high"
           />
         </Portrait>
