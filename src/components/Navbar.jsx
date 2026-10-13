@@ -10,7 +10,6 @@ const NAV_ITEMS = [
   { to: "/", label: "About" },
   { to: "/coding", label: "Coding" },
   { to: "/speaking", label: "Speaking" },
-  { to: "/apps", label: "My apps" },
   { to: "/writing", label: "Writing" },
 ];
 

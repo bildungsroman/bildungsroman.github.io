@@ -1,8 +1,11 @@
 import { Link } from "react-router";
 import SectionIntro from "../components/SectionIntro";
 import Repository from "../components/Repository";
+import AppCard from "../components/AppCard";
+import { CardGrid } from "../components/common";
 import { RepoGrid, Intro } from "../components/styled/repository";
 import repositories from "../data/repos.json";
+import apps from "../data/apps";
 
 const Coding = () => {
   return (
@@ -48,8 +51,21 @@ const Coding = () => {
           certification lounge at re:Invent 🤷‍♀️☕). One day I hope AWS makes a
           serverless developer certification, which I will eagerly get.
         </Intro>
-        <Intro>Check out some of my featured repositories below:</Intro>
+      </section>
 
+      <section id="apps" aria-labelledby="apps-heading">
+        <h2 id="apps-heading">My apps</h2>
+        <Intro>Things I've built and shipped that you can use right now:</Intro>
+        <CardGrid>
+          {apps.map((app) => (
+            <AppCard key={app.url} app={app} />
+          ))}
+        </CardGrid>
+      </section>
+
+      <section id="repositories" aria-labelledby="repositories-heading">
+        <h2 id="repositories-heading">Featured repositories</h2>
+        <Intro>A few of my pinned repositories on GitHub:</Intro>
         <RepoGrid>
           {repositories.map((repo) => (
             <Repository key={repo.name} repo={repo} />

@@ -116,7 +116,7 @@ const About = () => {
             serverless, and making developer tools feel delightful.
           </Lead>
           <Actions>
-            <ButtonLink to="/apps">See my apps</ButtonLink>
+            <ButtonLink to="/coding#apps">See my apps</ButtonLink>
             <ResumeLink
               className="lined-link"
               href="/resume.pdf"

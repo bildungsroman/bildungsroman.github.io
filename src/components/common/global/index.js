@@ -24,6 +24,9 @@ export const GlobalStyle = createGlobalStyle`
   main {
     display: block;
   }
+  [id] {
+    scroll-margin-top: 6rem;
+  }
   h1,
   h2,
   h3 {
