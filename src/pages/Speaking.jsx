@@ -17,7 +17,6 @@ const Banner = styled.img`
   width: 100%;
   height: auto;
   margin: 0 auto 3rem;
-  border-radius: 2rem;
   box-shadow: var(--shadow-lift);
 `;
 
@@ -56,7 +55,6 @@ const LinkList = styled.ul`
     align-items: flex-start;
     padding: 1rem 1.25rem;
     border: 1px solid var(--border);
-    border-radius: 1rem;
     background: var(--surface);
   }
   svg {

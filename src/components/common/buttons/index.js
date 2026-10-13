@@ -2,39 +2,27 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router";
 
 const buttonStyles = css`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.9rem 1.75rem;
-  border: none;
-  border-radius: 999px;
-  background: var(--button-gradient);
-  background-size: 200% 100%;
-  background-position: 0% 50%;
-  color: var(--on-button);
+  display: inline-block;
+  min-width: 12.5rem;
+  padding: 0.95rem 1.5rem 0.9rem;
+  border: 4px solid var(--brand);
+  background: var(--surface);
+  color: var(--primary);
   font-size: 1rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: var(--shadow);
-  transition:
-    background-position 400ms ease,
-    transform 200ms ease,
-    box-shadow 200ms ease;
+  box-shadow: 8px 10px 0 var(--button-shadow);
+  transition: box-shadow 500ms ease;
   &:hover {
-    color: var(--on-button);
-    background-position: 100% 50%;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lift);
+    color: var(--primary);
+    box-shadow: -4px 4px 0 var(--button-shadow);
   }
   @media (prefers-reduced-motion: reduce) {
     transition: none;
-    &:hover {
-      transform: none;
-    }
   }
 `;
 

@@ -30,6 +30,7 @@
   --shadow-lift: 0 18px 40px rgb(48 138 193 / 16%);
   --gradient: linear-gradient(135deg, #308ac1, #8cc4e6);
   --button-gradient: #1f6fa0;
+  --button-shadow: #308ac1;
   --on-button: #ffffff;
 }
 
@@ -55,6 +56,7 @@
   --shadow-lift: 0 18px 40px rgb(167 139 250 / 22%);
   --gradient: linear-gradient(120deg, #a78bfa 0%, #fb7185 60%, #fbbf24 100%);
   --button-gradient: linear-gradient(120deg, #a78bfa, #fb7185, #a78bfa);
+  --button-shadow: #fb7185;
   --on-button: #14112a;
 }
 

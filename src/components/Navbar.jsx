@@ -65,7 +65,6 @@ const Menu = styled.ul`
 const MenuLink = styled(NavLink)`
   display: block;
   padding: 0.5rem 0.85rem;
-  border-radius: 999px;
   color: var(--text);
   font-size: 1.05rem;
   font-weight: 400;
@@ -90,25 +89,16 @@ const IconButton = styled.button`
   width: 2.75rem;
   height: 2.75rem;
   border: 1px solid var(--border);
-  border-radius: 50%;
   background: var(--surface);
   color: var(--primary);
   cursor: pointer;
-  transition:
-    transform 200ms ease,
-    background 200ms ease;
+  transition: background 200ms ease;
   svg {
     width: 1.25rem;
     height: 1.25rem;
   }
   &:hover {
     background: var(--surface-2);
-    transform: rotate(-15deg);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    &:hover {
-      transform: none;
-    }
   }
 `;
 

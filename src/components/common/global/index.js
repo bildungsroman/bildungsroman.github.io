@@ -56,7 +56,6 @@ export const GlobalStyle = createGlobalStyle`
   :focus-visible {
     outline: 3px solid var(--brand);
     outline-offset: 3px;
-    border-radius: 4px;
   }
   img {
     max-width: 100%;
@@ -94,7 +93,6 @@ export const GlobalStyle = createGlobalStyle`
       bottom: -2px;
       width: 100%;
       height: 3px;
-      border-radius: 3px;
       background: var(--gradient);
       transform: scaleX(0);
       transform-origin: 100% 50%;

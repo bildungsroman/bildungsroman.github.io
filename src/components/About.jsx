@@ -21,7 +21,6 @@ const Eyebrow = styled.p`
   display: inline-block;
   margin: 0 0 1.25rem;
   padding: 0.35rem 0.9rem;
-  border-radius: 999px;
   background: var(--surface-2);
   color: var(--primary);
   font-size: 0.95rem;
@@ -64,7 +63,6 @@ const Portrait = styled.figure`
   position: relative;
   margin: 0;
   aspect-ratio: 1;
-  border-radius: 2.5rem;
   background: var(--gradient);
   box-shadow: var(--shadow-lift);
   overflow: hidden;
@@ -72,7 +70,6 @@ const Portrait = styled.figure`
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: inherit;
     box-shadow: inset 0 0 0 1px rgb(255 255 255 / 25%);
     pointer-events: none;
   }

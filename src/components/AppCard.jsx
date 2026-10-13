@@ -62,7 +62,6 @@ const Tags = styled.ul`
   list-style: none;
   li {
     padding: 0.2rem 0.7rem;
-    border-radius: 999px;
     background: var(--surface-2);
     color: var(--secondary);
     font-size: 0.85rem;

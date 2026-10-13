@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Card = styled.div`
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 1.25rem;
   box-shadow: var(--shadow);
   transition:
     transform 200ms ease,

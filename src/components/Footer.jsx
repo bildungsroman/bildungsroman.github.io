@@ -62,7 +62,6 @@ const SocialLink = styled.a`
   gap: 0.5rem;
   padding: 0.55rem 1rem;
   border: 1px solid var(--border);
-  border-radius: 999px;
   background: var(--bg);
   color: var(--text);
   font-size: 0.95rem;
