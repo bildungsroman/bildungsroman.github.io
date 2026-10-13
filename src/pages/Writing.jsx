@@ -1,4 +1,3 @@
-import React from "react";
 import SectionIntro from "../components/SectionIntro";
 import { ContainerLayout, ListSection } from "../components/common";
 import { Intro } from "../components/styled/repository";

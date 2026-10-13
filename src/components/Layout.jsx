@@ -1,4 +1,3 @@
-import React from "react";
 import { useTheme } from "../hooks/useTheme";
 import { GlobalStyle } from "./common/global";
 import Navbar from "./Navbar";

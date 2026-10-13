@@ -1,5 +1,3 @@
-import React from "react";
-import GitHubButton from "react-github-btn";
 import { FiStar, FiKey } from "react-icons/fi";
 import styled from "styled-components";
 import variables from "../data/variables";
@@ -97,14 +95,14 @@ const RepositoryHeader = ({ repo }) => {
           {repo.name}
         </a>
       </Title>
-      <GitHubButton
+      <a
         href={`https://github.com${repo.resourcePath}`}
-        data-icon="Star"
-        data-size="large"
-        aria-label="Star repo on GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={`Star ${repo.name} on GitHub`}
       >
-        Star
-      </GitHubButton>
+        <FiStar /> Star
+      </a>
     </RepoHead>
   );
 };

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link } from "react-router";
 import SectionIntro from "../components/SectionIntro";
 import Repository from "../components/Repository";
 import { ContainerLayout } from "../components/common";

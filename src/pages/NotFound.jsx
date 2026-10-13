@@ -1,4 +1,3 @@
-import React from "react";
 import { ContainerLayout, Title, SubText } from "../components/common";
 import { ButtonLink } from "../components/common/buttons";
 
