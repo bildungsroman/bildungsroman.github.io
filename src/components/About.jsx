@@ -88,7 +88,6 @@ const Portrait = styled.figure`
 `;
 
 const AboutSection = styled.section`
-  max-width: ${variables.readableWidth};
   h2 {
     margin-top: 3rem;
   }

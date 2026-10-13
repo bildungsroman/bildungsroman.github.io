@@ -7,7 +7,6 @@ export const RepoGrid = styled(CardGrid)`
 `;
 
 export const Intro = styled.p`
-  max-width: ${variables.readableWidth};
   font-size: 1.2rem;
   line-height: 1.9;
   @media (max-width: ${variables.breakpointPhone}) {
