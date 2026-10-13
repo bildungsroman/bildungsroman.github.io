@@ -2,6 +2,8 @@ import iffappLight from "../assets/img/apps/iffapp-light.webp";
 import iffappDark from "../assets/img/apps/iffapp-dark.webp";
 import contentsNotDeadLight from "../assets/img/apps/contentsnotdead-light.webp";
 import contentsNotDeadDark from "../assets/img/apps/contentsnotdead-dark.webp";
+import leaderboardLight from "../assets/img/apps/leaderboard-light.webp";
+import leaderboardDark from "../assets/img/apps/leaderboard-dark.webp";
 
 // Snapshots are 1280x800. To refresh one, screenshot the live site and run
 // `npm run optimize-images -- <file.png> --out src/assets/img/apps --width 1280`.
@@ -22,5 +24,13 @@ export default [
       "An open-source, themeable content platform monetized with Stripe subscriptions and per-content Machine Payments Protocol (MPP) payments, for humans and agents alike.",
     tags: ["Stripe", "MPP", "Agents", "Open source"],
     images: { light: contentsNotDeadLight, dark: contentsNotDeadDark },
+  },
+  {
+    name: "Stripe Projects Leaderboard",
+    url: "https://projects.dev/leaderboard",
+    description:
+      "Discover, upvote, and share the projects developers have built with Stripe Projects.",
+    tags: ["Stripe", "Stripe Projects"],
+    images: { light: leaderboardLight, dark: leaderboardDark },
   },
 ];

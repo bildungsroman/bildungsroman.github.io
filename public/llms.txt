@@ -16,6 +16,7 @@ Before software, Anna was a writer, editor, and Polish-to-English translator: co
 
 - [iffapp](https://iffapp.com): A "get-to-do" list rather than a to-do list. You get to do a thing if and only if you complete the tasks you need to do first. Built with Next.js, React, Clerk, Prisma, and Stripe.
 - [Content's Not Dead](https://contentsnotdead.com): An open-source, themeable content platform monetized with Stripe subscriptions and per-content Machine Payments Protocol (MPP) payments, for humans and agents.
+- [Stripe Projects Leaderboard](https://projects.dev/leaderboard): Discover, upvote, and share the projects developers have built with Stripe Projects.
 
 ## Talks
 
