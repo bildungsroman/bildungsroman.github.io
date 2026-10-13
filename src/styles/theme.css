@@ -6,30 +6,36 @@
 :root,
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #fff8f0;
-  --bg-glow-1: rgb(109 40 217 / 12%);
-  --bg-glow-2: rgb(244 63 94 / 12%);
-  --bg-glow-3: rgb(13 148 136 / 10%);
+  /*
+    --brand is the logo blue, used for non-text accents. It is too light for
+    body-size text on white, so text and buttons use the deeper --primary.
+  */
+  --brand: #308ac1;
+  --bg: #ffffff;
+  --bg-glow-1: transparent;
+  --bg-glow-2: transparent;
+  --bg-glow-3: transparent;
   --surface: #ffffff;
-  --surface-2: #f5edff;
-  --text: #1f1b2e;
-  --text-muted: #4b4560;
-  --heading: #1f1b2e;
-  --primary: #6d28d9;
-  --primary-strong: #5b21b6;
-  --accent: #e11d48;
-  --secondary: #0f766e;
+  --surface-2: #eaf3f9;
+  --text: #1c2430;
+  --text-muted: #4a5565;
+  --heading: #1c2430;
+  --primary: #1f6fa0;
+  --primary-strong: #185a82;
+  --accent: #185a82;
+  --secondary: #1f6fa0;
   --on-primary: #ffffff;
-  --border: rgb(31 27 46 / 10%);
-  --shadow: 0 1px 2px rgb(31 27 46 / 6%), 0 8px 24px rgb(109 40 217 / 8%);
-  --shadow-lift: 0 18px 40px rgb(109 40 217 / 18%);
-  --gradient: linear-gradient(120deg, #6d28d9 0%, #e11d48 60%, #f59e0b 100%);
-  --button-gradient: linear-gradient(120deg, #6d28d9, #be123c, #6d28d9);
+  --border: rgb(28 36 48 / 10%);
+  --shadow: 0 1px 2px rgb(28 36 48 / 6%), 0 8px 24px rgb(28 36 48 / 6%);
+  --shadow-lift: 0 18px 40px rgb(48 138 193 / 16%);
+  --gradient: linear-gradient(135deg, #308ac1, #8cc4e6);
+  --button-gradient: #1f6fa0;
   --on-button: #ffffff;
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
+  --brand: #a78bfa;
   --bg: #14112a;
   --bg-glow-1: rgb(167 139 250 / 18%);
   --bg-glow-2: rgb(251 113 133 / 14%);

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import variables from "../data/variables";
 import { ButtonLink } from "./common";
-import { GradientText } from "./common/global";
 import profileImage from "../assets/img/profile.webp";
 
 const Hero = styled.section`
@@ -35,6 +34,10 @@ const Title = styled.h1`
   margin: 0;
   font-size: clamp(2.75rem, 6.5vw, 4.75rem);
   letter-spacing: -0.02em;
+`;
+
+const Highlight = styled.span`
+  color: var(--primary);
 `;
 
 const Lead = styled.p`
@@ -109,7 +112,7 @@ const About = () => {
         <div>
           <Eyebrow>Developer Advocate at Stripe</Eyebrow>
           <Title>
-            Full-stack human, <GradientText>serverless fangirl</GradientText>
+            Full-stack human, <Highlight>serverless fangirl</Highlight>
           </Title>
           <Lead>
             Writer turned software engineer who loves React, TypeScript,

@@ -11,8 +11,6 @@ import socialMedia from "../data/socialMedia.json";
 import data from "../data/data";
 import variables from "../data/variables";
 import { ContainerLayout, ButtonDefault } from "./common";
-import { GradientText } from "./common/global";
-
 const FooterStyle = styled.footer`
   margin-top: 7rem;
   padding: 4rem 0 2rem;
@@ -112,9 +110,7 @@ const Footer = () => (
           </SocialList>
         </div>
         <div>
-          <Quote>
-            <GradientText>Want to say hi?</GradientText>
-          </Quote>
+          <Quote>Want to say hi?</Quote>
           <ButtonDefault href={`mailto:${data.SiteContact.email}`}>
             Contact me
           </ButtonDefault>

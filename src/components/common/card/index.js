@@ -11,7 +11,7 @@ export const Card = styled.div`
     border-color 200ms ease;
   &:hover {
     transform: translateY(-4px);
-    border-color: var(--primary);
+    border-color: var(--brand);
     box-shadow: var(--shadow-lift);
   }
   @media (prefers-reduced-motion: reduce) {

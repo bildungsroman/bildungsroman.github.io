@@ -4,7 +4,7 @@ import { FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi";
 import styled from "styled-components";
 import variables from "../data/variables";
 import { ContainerLayout } from "./common";
-import { GradientText } from "./common/global";
+import logo from "../assets/img/logo-sm.png";
 
 const NAV_ITEMS = [
   { to: "/", label: "About" },
@@ -31,11 +31,13 @@ const Bar = styled.nav`
   min-height: 4.5rem;
 `;
 
-const Wordmark = styled(Link)`
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
+const Logo = styled(Link)`
+  display: flex;
+  img {
+    display: block;
+    width: auto;
+    height: 2.75rem;
+  }
 `;
 
 const Menu = styled.ul`
@@ -133,9 +135,9 @@ const Navbar = ({ isDark, toggleDark, siteTitle }) => {
     <Header>
       <ContainerLayout>
         <Bar aria-label="Main">
-          <Wordmark to="/" aria-label={`${siteTitle} home`}>
-            <GradientText>{siteTitle}</GradientText>
-          </Wordmark>
+          <Logo to="/" aria-label={`${siteTitle} home`}>
+            <img src={logo} alt="" width="141" height="58" />
+          </Logo>
           <Menu id="main-menu" $open={menuOpen}>
             {NAV_ITEMS.map(({ to, label }) => (
               <li key={to}>

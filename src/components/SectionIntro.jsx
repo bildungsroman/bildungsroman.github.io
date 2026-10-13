@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import variables from "../data/variables";
-import { GradientText } from "./common/global";
 
 const Wrapper = styled.header`
   padding: 6rem 0 3rem;
@@ -26,9 +25,7 @@ const Subtitle = styled.p`
 
 const SectionIntro = ({ title, subtitle }) => (
   <Wrapper>
-    <Title>
-      <GradientText>{title}</GradientText>
-    </Title>
+    <Title>{title}</Title>
     {subtitle && <Subtitle>{subtitle}</Subtitle>}
   </Wrapper>
 );

@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--accent);
   }
   :focus-visible {
-    outline: 3px solid var(--primary);
+    outline: 3px solid var(--brand);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -123,11 +123,4 @@ export const Title = styled.h1`
 export const SubText = styled.p`
   font-size: 1rem;
   line-height: 2;
-`;
-
-export const GradientText = styled.span`
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 `;
