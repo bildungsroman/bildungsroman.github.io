@@ -17,18 +17,6 @@ const Hero = styled.section`
   }
 `;
 
-const Eyebrow = styled.p`
-  display: inline-block;
-  margin: 0 0 1.25rem;
-  padding: 0.35rem 0.9rem;
-  background: var(--surface-2);
-  color: var(--primary);
-  font-size: 0.95rem;
-  font-weight: 900;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-`;
-
 const Title = styled.h1`
   margin: 0;
   font-size: clamp(2.75rem, 6.5vw, 4.75rem);
