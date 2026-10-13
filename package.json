@@ -6,7 +6,9 @@
   "description": "Developer portfolio site built with Vite + React",
   "author": "Anna Spysz",
   "scripts": {
+    "prebuild": "node scripts/fetch-repos.mjs",
     "build": "vite build",
+    "fetch-repos": "node scripts/fetch-repos.mjs",
     "dev": "vite",
     "preview": "vite preview",
     "fix": "prettier --write \"**/*.{js,jsx,mjs,json,md}\" && eslint . --fix",

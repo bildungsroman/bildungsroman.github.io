@@ -1,34 +1,11 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import SectionIntro from "../components/SectionIntro";
 import Repository from "../components/Repository";
 import { ContainerLayout } from "../components/common";
 import { RepoGrid, Intro } from "../components/styled/repository";
-import githubApiService from "../services/githubApi";
+import repositories from "../data/repos.json";
 
 const Coding = () => {
-  const [repositories, setRepositories] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchRepositories = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const data = await githubApiService.getPinnedRepositories();
-        setRepositories(data.viewer.repositories.nodes);
-      } catch (err) {
-        console.error("Failed to fetch repositories:", err);
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchRepositories();
-  }, []);
-
   return (
     <>
       <SectionIntro
@@ -74,25 +51,11 @@ const Coding = () => {
         </Intro>
         <Intro>Check out some of my featured repositories below:</Intro>
 
-        {loading && <Intro>Loading repositories...</Intro>}
-
-        {error && (
-          <Intro style={{ color: "#d73a49" }}>
-            Failed to load repositories: {error}
-          </Intro>
-        )}
-
-        {!loading && !error && repositories.length > 0 && (
-          <RepoGrid>
-            {repositories.map((repo, index) => (
-              <Repository key={index} repo={repo} />
-            ))}
-          </RepoGrid>
-        )}
-
-        {!loading && !error && repositories.length === 0 && (
-          <Intro>No repositories found.</Intro>
-        )}
+        <RepoGrid>
+          {repositories.map((repo) => (
+            <Repository key={repo.name} repo={repo} />
+          ))}
+        </RepoGrid>
       </ContainerLayout>
     </>
   );
