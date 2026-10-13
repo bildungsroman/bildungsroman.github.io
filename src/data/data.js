@@ -4,7 +4,7 @@ export default {
   SiteTagline: "Developer Advocate and Software Engineer",
   SiteAuthor: "Anna Spysz",
   SiteDescription:
-    "Anna Spysz is a Developer Advocate at Stripe and full-stack software engineer who loves React, TypeScript, serverless, and good documentation.",
+    "Anna Spysz is a Developer Advocate at Stripe and former full-stack software engineer who loves React, TypeScript, serverless, and good documentation.",
   SiteContact: {
     email: "anna@annaspysz.com",
   },

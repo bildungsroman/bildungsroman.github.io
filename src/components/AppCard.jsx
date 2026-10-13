@@ -83,10 +83,16 @@ const AppCard = ({ app }) => {
 
   return (
     <AppCardStyle as="article">
-      <Snapshot href={app.url} target="_blank" rel="noreferrer" tabIndex={-1}>
+      <Snapshot
+        href={app.url}
+        target="_blank"
+        rel="noreferrer"
+        tabIndex={-1}
+        aria-hidden="true"
+      >
         <img
           src={app.images[theme]}
-          alt={`Screenshot of the ${app.name} home page`}
+          alt=""
           width="1280"
           height="800"
           loading="lazy"
