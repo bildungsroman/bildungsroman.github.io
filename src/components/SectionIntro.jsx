@@ -1,41 +1,36 @@
 import styled from "styled-components";
 import variables from "../data/variables";
+import { GradientText } from "./common/global";
 
-export const Wrapper = styled.div`
-  padding: 8rem 0 4rem 0;
+const Wrapper = styled.header`
+  padding: 6rem 0 3rem;
+  text-align: center;
   @media (max-width: ${variables.breakpointPhone}) {
-    padding: 4rem 0 4rem 0;
+    padding: 3.5rem 0 2rem;
   }
 `;
-export const Title = styled.h1`
-  text-align: center;
-  font-size: 3rem;
-  font-family: "Lato";
-  font-weight: 400;
-  @media (max-width: ${variables.breakpointPhone}) {
-    font-size: 2rem;
-  }
+
+const Title = styled.h1`
+  margin: 0;
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  letter-spacing: -0.02em;
 `;
-export const Subtitle = styled.h2`
-  text-align: center;
-  font-size: 2rem;
-  font-family: "Lato";
+
+const Subtitle = styled.p`
+  margin: 1rem auto 0;
+  max-width: ${variables.readableWidth};
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-style: italic;
-  font-weight: 100;
-  @media (max-width: ${variables.breakpointPhone}) {
-    font-size: 1rem;
-  }
+  color: var(--text-muted);
 `;
 
-const SectionIntro = ({ title, subtitle }) => {
-  return (
-    <>
-      <Wrapper>
-        {title && <Title>{title}</Title>}
-        {subtitle && <Subtitle>{subtitle}</Subtitle>}
-      </Wrapper>
-    </>
-  );
-};
+const SectionIntro = ({ title, subtitle }) => (
+  <Wrapper>
+    <Title>
+      <GradientText>{title}</GradientText>
+    </Title>
+    {subtitle && <Subtitle>{subtitle}</Subtitle>}
+  </Wrapper>
+);
 
 export default SectionIntro;

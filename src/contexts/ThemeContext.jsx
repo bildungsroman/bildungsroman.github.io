@@ -1,62 +1,48 @@
-import { useState, useEffect } from "react";
-import { ThemeProvider as StyledThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../theme.js";
-import { ThemeContext } from "./ThemeContext.js";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import { ThemeContext, THEME_OVERRIDE_KEY } from "./ThemeContext.js";
+
+const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+const subscribeToSystemTheme = (onChange) => {
+  darkQuery.addEventListener("change", onChange);
+  return () => darkQuery.removeEventListener("change", onChange);
+};
+
+const getSystemTheme = () => (darkQuery.matches ? "dark" : "light");
+
+const readOverride = () => {
+  const saved = sessionStorage.getItem(THEME_OVERRIDE_KEY);
+  return saved === "dark" || saved === "light" ? saved : null;
+};
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Check localStorage for saved theme preference first
-    const savedTheme = localStorage.getItem("theme");
+  const systemTheme = useSyncExternalStore(
+    subscribeToSystemTheme,
+    getSystemTheme
+  );
+  const [override, setOverride] = useState(readOverride);
+  const theme = override ?? systemTheme;
 
-    if (savedTheme) {
-      return savedTheme === "dark";
-    }
-    // If no saved preference, check browser preference
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    if (prefersDark) {
-      return true;
-    }
-    // Default to light theme
-    return false;
-  });
-
-  // Listen for system theme changes
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e) => {
-      // Only update if user hasn't manually set a preference
-      const savedTheme = localStorage.getItem("theme");
-      if (!savedTheme) {
-        setIsDarkMode(e.matches);
-      }
-    };
-
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
 
   const toggleTheme = () => {
-    setIsDarkMode((prev) => {
-      const newTheme = !prev;
-      localStorage.setItem("theme", newTheme ? "dark" : "light");
-      return newTheme;
-    });
-  };
-
-  const currentTheme = isDarkMode ? darkTheme : lightTheme;
-
-  const value = {
-    isDarkMode,
-    toggleTheme,
-    theme: currentTheme,
+    const next = theme === "dark" ? "light" : "dark";
+    if (next === systemTheme) {
+      sessionStorage.removeItem(THEME_OVERRIDE_KEY);
+      setOverride(null);
+    } else {
+      sessionStorage.setItem(THEME_OVERRIDE_KEY, next);
+      setOverride(next);
+    }
   };
 
   return (
-    <ThemeContext.Provider value={value}>
-      <StyledThemeProvider theme={currentTheme}>{children}</StyledThemeProvider>
+    <ThemeContext.Provider
+      value={{ theme, isDarkMode: theme === "dark", toggleTheme }}
+    >
+      {children}
     </ThemeContext.Provider>
   );
 };

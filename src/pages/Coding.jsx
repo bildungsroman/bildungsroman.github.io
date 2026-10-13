@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import SectionIntro from "../components/SectionIntro";
 import Repository from "../components/Repository";
-import { ContainerLayout } from "../components/common";
 import { RepoGrid, Intro } from "../components/styled/repository";
 import repositories from "../data/repos.json";
 
@@ -12,7 +11,7 @@ const Coding = () => {
         title="Coding"
         subtitle="Frontend is my jam, teaching is my passion"
       />
-      <ContainerLayout>
+      <section>
         <Intro>
           I'm a dedicated full-stack engineer with a passion for frontend
           development and serverless technologies. Recently, I've been expanding
@@ -56,7 +55,7 @@ const Coding = () => {
             <Repository key={repo.name} repo={repo} />
           ))}
         </RepoGrid>
-      </ContainerLayout>
+      </section>
     </>
   );
 };

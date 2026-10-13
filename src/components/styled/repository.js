@@ -1,23 +1,16 @@
 import styled from "styled-components";
 import variables from "../../data/variables";
+import { CardGrid } from "../common";
 
-export const RepoGrid = styled.div`
-  @media (min-width: ${variables.breakpointPhone}) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-  }
+export const RepoGrid = styled(CardGrid)`
+  margin-top: 2rem;
 `;
 
 export const Intro = styled.p`
-  font-size: 1.4rem;
-  line-height: 2;
-  a {
-    color: ${variables.primary};
-    font-weight: 400;
-    padding: 0;
-  }
+  max-width: ${variables.readableWidth};
+  font-size: 1.2rem;
+  line-height: 1.9;
   @media (max-width: ${variables.breakpointPhone}) {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 `;

@@ -3,184 +3,113 @@ import variables from "../../../data/variables.js";
 import "./fonts.css";
 
 export const GlobalStyle = createGlobalStyle`
-  // normalize
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
   html {
-    box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    body {
-      font-size: 14px;
-      font-family: 'Lato';
-      margin: 0;
-      background-color: ${(props) => props.theme.global.background};
-      color: ${(props) => props.theme.global.color};
-      @media(min-width: ${variables.breakpointPhone}) {
-        background: ${(props) => props.theme.global.backgroundGradient};
-      }
-    }
-    main {
-      display: block;
-    }
-    h1 {
-      font-size: 2em;
-      margin: 0.67em 0;
-    }
-    h1, h2 {
-      color: ${(props) => props.theme.global.grey};
-    }
-    hr {
-      box-sizing: content-box; /* 1 */
-      height: 0; /* 1 */
-      overflow: visible; /* 2 */
-    }
-    a {
-      background-color: transparent;
-      text-decoration: none;
-      color: ${(props) => props.theme.global.link};
-    }
-    a:hover {
-      color: ${(props) => props.theme.global.linkHover};
-    }
-    b,
-    strong {
-      font-weight: bolder;
-      font-family: 'Lato';
-    }
-    small {
-      font-size: 80%;
-    }
-    sub,
-    sup {
-      font-size: 75%;
-      line-height: 0;
-      position: relative;
-      vertical-align: baseline;
-    }
-    sub {
-      bottom: -0.25em;
-    }
-    sup {
-      top: -0.5em;
-    }
-    img {
-      border-style: none;
-    }
-    .center {
-      text-align: center;
-    }
-    button,
-    input,
-    optgroup,
-    select,
-    textarea {
-      font-family: inherit; /* 1 */
-      font-size: 100%; /* 1 */
-      line-height: 1.15; /* 1 */
-      margin: 0; /* 2 */
-    }
-    button,
-    input { /* 1 */
-      overflow: visible;
-    }
-    button,
-    select { /* 1 */
-      text-transform: none;
-    }
-    button,
-    [type="button"],
-    [type="reset"],
-    [type="submit"] {
-      -webkit-appearance: button;
-    }
-    button::-moz-focus-inner,
-    [type="button"]::-moz-focus-inner,
-    [type="reset"]::-moz-focus-inner,
-    [type="submit"]::-moz-focus-inner {
-      border-style: none;
-      padding: 0;
-    }
-    button:-moz-focusring,
-    [type="button"]:-moz-focusring,
-    [type="reset"]:-moz-focusring,
-    [type="submit"]:-moz-focusring {
-      outline: 1px dotted ButtonText;
-    }
-    [hidden] {
-      display: none;
-    }
-    .text-primary {
-      color: ${variables.primary};
-    }
-    .align-middle {
-      vertical-align: middle;
-    }
-    .switch div {
-      background: ${(props) => props.theme.global.link};
-    }
-    .fa-adjust {
-      color: ${(props) => props.theme.global.link};
-    }
-    .slider {
-      background-color: ${(props) => props.theme.global.background};
-    }
-    p {
-      font-size: 1.125rem;
-      font-weight: 200;
-      line-height: 1.8;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
     }
   }
-
-  
-.lined-link {
-  display: inline-block;
-  position: relative;
-  padding-top: .5em;
-  padding-bottom: .25em;
-  transition: all .2s ease-out;
-  will-change: transform, color;
-  &:after {
-    z-index: 1;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    content: "";
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  main {
     display: block;
-    width: 100%;
-    height: 5px;
-    background-color: ${variables.primary};
-    transform: scale(0, 1);
-    transform-origin: 100% 50%;
-    will-change: transform;
-    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), 
-    -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   }
-  &:hover:after,
-  &.active:after {
-    background-color: ${variables.primary};
-    color: ${variables.text.light};
-    transform: scale(1);
-    transform-origin: 0 50%;
-    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s ease-out, 
-    -webkit-transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+  h1,
+  h2,
+  h3 {
+    color: var(--heading);
+    font-weight: 900;
+    line-height: 1.2;
   }
-  &.active {
-    color: ${variables.primary};
+  h2 {
+    font-size: 2rem;
+    margin: 3.5rem 0 1.5rem;
+    @media (max-width: ${variables.breakpointPhone}) {
+      font-size: 1.5rem;
+    }
   }
-}
+  p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 150ms ease;
+  }
+  a:hover {
+    color: var(--accent);
+  }
+  :focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  img {
+    max-width: 100%;
+    border-style: none;
+  }
+  button,
+  input {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+  }
+  ::selection {
+    background: var(--primary);
+    color: var(--on-primary);
+  }
+  .center {
+    text-align: center;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
 
-.error__emoji {
-  width: 30vw;
-}
+  .lined-link {
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--gradient);
+      transform: scaleX(0);
+      transform-origin: 100% 50%;
+      transition: transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    }
+    &:hover::after,
+    &.active::after {
+      transform: scaleX(1);
+      transform-origin: 0 50%;
+    }
+  }
+
+  .error__emoji {
+    width: min(30rem, 70vw);
+  }
 `;
 
 export const Title = styled.h1`
-  font-family: "Lato";
   font-size: 2rem;
   text-transform: capitalize;
   @media (max-width: ${variables.breakpointPhone}) {
@@ -191,4 +120,11 @@ export const Title = styled.h1`
 export const SubText = styled.p`
   font-size: 1rem;
   line-height: 2;
+`;
+
+export const GradientText = styled.span`
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 `;

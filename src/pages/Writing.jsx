@@ -1,12 +1,12 @@
 import SectionIntro from "../components/SectionIntro";
-import { ContainerLayout, ListSection } from "../components/common";
+import { ListSection } from "../components/common";
 import { Intro } from "../components/styled/repository";
 
 const Writing = () => {
   return (
     <>
       <SectionIntro title="Writing" subtitle="On my former life as a writer" />
-      <ContainerLayout>
+      <section>
         <Intro>
           I am the co-author and editor of the book{" "}
           <em>
@@ -95,7 +95,7 @@ const Writing = () => {
         <ListSection>
           <div>
             <h2>Selected Writing</h2>
-            <Intro>
+            <Intro as="div">
               <ul>
                 <li>
                   <a
@@ -192,7 +192,7 @@ const Writing = () => {
           </div>
           <div>
             <h2>Selected Interviews</h2>
-            <Intro>
+            <Intro as="div">
               <ul>
                 <li>
                   I was interviewed about the topic of women in tech and
@@ -234,7 +234,7 @@ const Writing = () => {
             </Intro>
           </div>
         </ListSection>
-      </ContainerLayout>
+      </section>
     </>
   );
 };
