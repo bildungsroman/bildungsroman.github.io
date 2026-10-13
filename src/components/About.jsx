@@ -2,7 +2,7 @@ import styled from "styled-components";
 import variables from "../data/variables";
 import { ButtonLink } from "./common";
 import { GradientText } from "./common/global";
-import profileImage from "../assets/img/profile-text.png";
+import profileImage from "../assets/img/profile.webp";
 
 const Hero = styled.section`
   display: grid;
@@ -131,8 +131,8 @@ const About = () => {
           <img
             src={profileImage}
             alt="Anna Spysz smiling and holding a sign that says Hi, I'm Anna"
-            width="1000"
-            height="1000"
+            width="1200"
+            height="625"
             fetchPriority="high"
           />
         </Portrait>

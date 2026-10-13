@@ -9,7 +9,7 @@ import {
   audioInterviews,
   blogPosts,
 } from "../data/speaking";
-import speakingImage from "../assets/img/speaking-banner.png";
+import speakingImage from "../assets/img/speaking-banner.webp";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 const Banner = styled.img`
