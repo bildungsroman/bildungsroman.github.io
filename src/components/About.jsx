@@ -106,7 +106,6 @@ const About = () => {
     <>
       <Hero>
         <div>
-          <Eyebrow>Developer Advocate at Stripe</Eyebrow>
           <Title>
             Full-stack human, <Highlight>serverless fangirl</Highlight>
           </Title>
