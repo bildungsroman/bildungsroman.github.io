@@ -13,6 +13,13 @@ export const upcomingTalks = [
     location: "Dublin",
     url: "https://stripe.events/agenticdevday",
   },
+  {
+    title: "Teaching agents to pay",
+    event: "droidCon London",
+    date: "December 10, 2026",
+    location: "London",
+    url: "https://london.droidcon.com/",
+  },
 ];
 
 export const talks = [
