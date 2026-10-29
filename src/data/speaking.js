@@ -55,6 +55,20 @@ export const talks = [
 
 export const interviews = [
   {
+    title: "Agents compete for your purchase inside M11 Labs' Open Market",
+    youtubeId: "fdqsoT-lrHI",
+    event: "Stripe Developers",
+    description:
+      "David from M11 Labs walks us through Open Market, a research preview platform where AI agents compete to sell you products. Instead of traditional ads and marketing, seller agents pitch products based on hard facts while a referee agent verifies claims using research reports and trusted sources. The platform narrows down millions of products to a personalized top five, then agents battle it out to win your purchase.",
+  },
+  {
+    title: "AI Agents That Pay: AgentCore Payments + Stripe Privy Demo",
+    youtubeId: "FJCkq4lHMVQ",
+    event: "Stripe Developers",
+    description:
+      "What happens when an AI research agent hits a paywall? In this hands-on demo, Hasan Tariq, an AWS Solutions Architect, demonstrates how Amazon Bedrock AgentCore Payments enables an agent to pay for access using Stripe Privy.",
+  },
+  {
     title: "Supabase + Stripe Projects: build in a weekend, scale to millions",
     youtubeId: "-mIQWM7rMVM",
     event: "Stripe Sessions",
